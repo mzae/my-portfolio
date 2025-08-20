@@ -1,0 +1,67 @@
+# Site settings
+title: "Wanjama's Portfolio"
+email: your@email.com
+description: >-
+  A personal portfolio showcasing my resume and OCI labs.
+baseurl: "" # Leave empty for root
+url: "http://localhost:4000" # Local development URL
+
+# Theme
+theme: minimal-mistakes-jekyll
+minimal_mistakes_skin: "default"
+
+# Author profile
+author:
+  name: "Wanjama"
+  avatar: "/assets/images/profile.jpg" # Optional
+  bio: "Cloud learner focused on OCI policies, compliance, and infrastructure."
+  location: "Ruiru, Kenya"
+  email: "your@email.com"
+  linkedin: "https://linkedin.com/in/wanjama"
+
+# Collections
+collections:
+  labs:
+    output: true
+    permalink: /labs/:title/
+
+# Defaults for labs
+defaults:
+  - scope:
+      path: ""
+      type: labs
+    values:
+      layout: single
+      author_profile: true
+
+# Plugins (required by Minimal Mistakes)
+plugins:
+  - jekyll-include-cache
+# - jekyll-archives
+  - jekyll-paginate
+# - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Navigation data
+data_dir: _data
+
+# Markdown processor
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter_opts:
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+
+
+# Exclude folders from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - error.txt

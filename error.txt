@@ -1,0 +1,2 @@
+Configuration file: /mnt/c/Users/comps/my-portfolio/_config.yml
+jekyll 4.3.4 | Error:  'plugins' should be set as an array, but was: nil.
