@@ -1,0 +1,16 @@
+  Logging at level: debug
+    Jekyll Version: 4.3.4
+  Logging at level: debug
+    Jekyll Version: 4.3.4
+            Source: /mnt/c/Users/comps/my-portfolio/.github/workflows
+       Destination: /mnt/c/Users/comps/my-portfolio/.github/workflows/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+       EntryFilter: excluded /.jekyll-cache
+                    done in 0.039 seconds.
+         Requiring: jekyll-watch
+           Watcher: Ignoring (?-mix:^_site\/)
+           Watcher: Ignoring (?-mix:^\.jekyll\-cache\/)
+ Auto-regeneration: enabled for '/mnt/c/Users/comps/my-portfolio/.github/workflows'
+[2025-08-21 14:04:04] INFO  WEBrick 1.9.1
+[2025-08-21 14:04:04] INFO  ruby 3.3.8 (2025-04-09) [x86_64-linux-gnu]
