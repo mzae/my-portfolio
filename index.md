@@ -8,7 +8,9 @@ Hi, I'm **Wanjama** — a cloud enthusiast focused on mastering Oracle Cloud Inf
 This portfolio showcases my resume and hands-on labs as I explore policies, compliance, and advanced OCI services.
 
 Explore:
+## Welcome to My Portfolio
 - [Resume](./resume/)
-- [Labs](./labs/)
-- [Lab 1](./labs/labs1/)
+- [Labs Overview](./labs/)
+- [Lab 1: Azure Security Lab](./labs/labs1/)
+
 
