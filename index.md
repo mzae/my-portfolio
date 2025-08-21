@@ -10,3 +10,5 @@ This portfolio showcases my resume and hands-on labs as I explore policies, comp
 Explore:
 - [Resume](./resume/)
 - [Labs](./labs/)
+- [Lab 1](./labs/labs1/)
+
