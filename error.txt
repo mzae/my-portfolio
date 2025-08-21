@@ -1,2 +1,155 @@
+  Logging at level: debug
+    Jekyll Version: 4.3.4
 Configuration file: /mnt/c/Users/comps/my-portfolio/_config.yml
-jekyll 4.3.4 | Error:  'plugins' should be set as an array, but was: nil.
+  Logging at level: debug
+    Jekyll Version: 4.3.4
+             Theme: minimal-mistakes-jekyll
+      Theme source: /home/baja/.gem/gems/minimal-mistakes-jekyll-4.27.3
+         Requiring: jekyll-paginate
+         Requiring: jekyll-sitemap
+         Requiring: jekyll-gist
+         Requiring: jekyll-feed
+         Requiring: jekyll-include-cache
+         Requiring: jekyll-include-cache
+         Requiring: jekyll-paginate
+         Requiring: jekyll-feed
+         Requiring: jekyll-seo-tag
+            Source: /mnt/c/Users/comps/my-portfolio
+       Destination: /mnt/c/Users/comps/my-portfolio/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+           Reading: /_layouts/archive-taxonomy.html
+           Reading: /_layouts/archive.html
+           Reading: /_layouts/categories.html
+           Reading: /_layouts/category.html
+           Reading: /_layouts/collection.html
+           Reading: /_layouts/compress.html
+           Reading: /_layouts/default.html
+           Reading: /_layouts/home.html
+           Reading: /_layouts/posts.html
+           Reading: /_layouts/search.html
+           Reading: /_layouts/single.html
+           Reading: /_layouts/splash.html
+           Reading: /_layouts/tag.html
+           Reading: /_layouts/tags.html
+       EntryFilter: excluded /.jekyll-cache
+       EntryFilter: excluded /error.txt
+       EntryFilter: excluded /Gemfile
+       EntryFilter: excluded /Gemfile.lock
+           Reading: index.md
+           Reading: labs.md
+           Reading: resume.md
+           Reading: _labs/labs1.md
+           Reading: assets/css/main.scss
+           Reading: assets/js/lunr/lunr-en.js
+           Reading: assets/js/lunr/lunr-gr.js
+           Reading: assets/js/lunr/lunr-store.js
+           Reading: _data/navigation.yml
+           Reading: _data/navigation.yml
+           Reading: _data/ui-text.yml
+        Generating: Jekyll::Paginate::Pagination finished in 8.623e-06 seconds.
+        Generating: Jekyll::JekyllSitemap finished in 0.001309248 seconds.
+       Jekyll Feed: Generating feed for posts
+        Generating: JekyllFeed::Generator finished in 0.00115557 seconds.
+         Rendering: _labs/labs1.md
+  Pre-Render Hooks: _labs/labs1.md
+  Rendering Markup: _labs/labs1.md
+Post-Convert Hooks: _labs/labs1.md
+  Rendering Layout: _labs/labs1.md
+         Rendering: _labs/labs1.md/#excerpt
+  Pre-Render Hooks: _labs/labs1.md/#excerpt
+  Rendering Markup: _labs/labs1.md/#excerpt
+Post-Convert Hooks: _labs/labs1.md/#excerpt
+Include cache miss: /home/baja/.gem/gems/minimal-mistakes-jekyll-4.27.3/_includes/skip-links.html
+Include cache miss: /home/baja/.gem/gems/minimal-mistakes-jekyll-4.27.3/_includes/masthead.html
+Include cache miss: /home/baja/.gem/gems/minimal-mistakes-jekyll-4.27.3/_includes/footer.html
+         Rendering: index.md
+  Pre-Render Hooks: index.md
+  Rendering Markup: index.md
+Post-Convert Hooks: index.md
+  Rendering Layout: index.md
+ Include cache hit: /home/baja/.gem/gems/minimal-mistakes-jekyll-4.27.3/_includes/skip-links.html
+ Include cache hit: /home/baja/.gem/gems/minimal-mistakes-jekyll-4.27.3/_includes/masthead.html
+ Include cache hit: /home/baja/.gem/gems/minimal-mistakes-jekyll-4.27.3/_includes/footer.html
+         Rendering: labs.md
+  Pre-Render Hooks: labs.md
+  Rendering Liquid: labs.md
+  Rendering Markup: labs.md
+Post-Convert Hooks: labs.md
+  Rendering Layout: labs.md
+ Include cache hit: /home/baja/.gem/gems/minimal-mistakes-jekyll-4.27.3/_includes/skip-links.html
+ Include cache hit: /home/baja/.gem/gems/minimal-mistakes-jekyll-4.27.3/_includes/masthead.html
+ Include cache hit: /home/baja/.gem/gems/minimal-mistakes-jekyll-4.27.3/_includes/footer.html
+         Rendering: resume.md
+  Pre-Render Hooks: resume.md
+  Rendering Markup: resume.md
+Post-Convert Hooks: resume.md
+  Rendering Layout: resume.md
+ Include cache hit: /home/baja/.gem/gems/minimal-mistakes-jekyll-4.27.3/_includes/skip-links.html
+ Include cache hit: /home/baja/.gem/gems/minimal-mistakes-jekyll-4.27.3/_includes/masthead.html
+ Include cache hit: /home/baja/.gem/gems/minimal-mistakes-jekyll-4.27.3/_includes/footer.html
+         Rendering: assets/css/main.scss
+  Pre-Render Hooks: assets/css/main.scss
+  Rendering Liquid: assets/css/main.scss
+  Rendering Markup: assets/css/main.scss
+Post-Convert Hooks: assets/css/main.scss
+         Rendering: assets/js/lunr/lunr-en.js
+  Pre-Render Hooks: assets/js/lunr/lunr-en.js
+  Rendering Liquid: assets/js/lunr/lunr-en.js
+  Rendering Markup: assets/js/lunr/lunr-en.js
+Post-Convert Hooks: assets/js/lunr/lunr-en.js
+         Rendering: assets/js/lunr/lunr-gr.js
+  Pre-Render Hooks: assets/js/lunr/lunr-gr.js
+  Rendering Liquid: assets/js/lunr/lunr-gr.js
+  Rendering Markup: assets/js/lunr/lunr-gr.js
+Post-Convert Hooks: assets/js/lunr/lunr-gr.js
+         Rendering: assets/js/lunr/lunr-store.js
+  Pre-Render Hooks: assets/js/lunr/lunr-store.js
+  Rendering Liquid: assets/js/lunr/lunr-store.js
+  Rendering Markup: assets/js/lunr/lunr-store.js
+Post-Convert Hooks: assets/js/lunr/lunr-store.js
+         Rendering: sitemap.xml
+  Pre-Render Hooks: sitemap.xml
+  Rendering Liquid: sitemap.xml
+  Rendering Markup: sitemap.xml
+Post-Convert Hooks: sitemap.xml
+  Rendering Layout: sitemap.xml
+         Rendering: robots.txt
+  Pre-Render Hooks: robots.txt
+  Rendering Liquid: robots.txt
+  Rendering Markup: robots.txt
+Post-Convert Hooks: robots.txt
+  Rendering Layout: robots.txt
+         Rendering: feed.xml
+  Pre-Render Hooks: feed.xml
+  Rendering Liquid: feed.xml
+  Rendering Markup: feed.xml
+Post-Convert Hooks: feed.xml
+  Rendering Layout: feed.xml
+         Rendering: assets/css/main.css.map
+  Pre-Render Hooks: assets/css/main.css.map
+  Rendering Markup: assets/css/main.css.map
+Post-Convert Hooks: assets/css/main.css.map
+           Writing: /mnt/c/Users/comps/my-portfolio/_site/index.html
+           Writing: /mnt/c/Users/comps/my-portfolio/_site/labs/index.html
+           Writing: /mnt/c/Users/comps/my-portfolio/_site/resume/index.html
+           Writing: /mnt/c/Users/comps/my-portfolio/_site/assets/css/main.css
+           Writing: /mnt/c/Users/comps/my-portfolio/_site/assets/js/lunr/lunr-en.js
+           Writing: /mnt/c/Users/comps/my-portfolio/_site/assets/js/lunr/lunr-gr.js
+           Writing: /mnt/c/Users/comps/my-portfolio/_site/assets/js/lunr/lunr-store.js
+           Writing: /mnt/c/Users/comps/my-portfolio/_site/sitemap.xml
+           Writing: /mnt/c/Users/comps/my-portfolio/_site/robots.txt
+           Writing: /mnt/c/Users/comps/my-portfolio/_site/feed.xml
+           Writing: /mnt/c/Users/comps/my-portfolio/_site/assets/css/main.css.map
+           Writing: /mnt/c/Users/comps/my-portfolio/_site/labs/labs1/index.html
+                    done in 1.12 seconds.
+         Requiring: jekyll-watch
+           Watcher: Ignoring (?-mix:^_config\.yml)
+           Watcher: Ignoring (?-mix:^_site\/)
+           Watcher: Ignoring (?-mix:^Gemfile)
+           Watcher: Ignoring (?-mix:^Gemfile\.lock)
+           Watcher: Ignoring (?-mix:^error\.txt)
+           Watcher: Ignoring (?-mix:^\.jekyll\-cache\/)
+ Auto-regeneration: enabled for '/mnt/c/Users/comps/my-portfolio'
+[2025-08-20 22:46:25] INFO  WEBrick 1.9.1
+[2025-08-20 22:46:25] INFO  ruby 3.3.8 (2025-04-09) [x86_64-linux-gnu]
