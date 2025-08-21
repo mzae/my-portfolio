@@ -1,16 +1,22 @@
 # Site settings
 title: "Wanjama's Portfolio"
-email: your@email.com
+email: "your@email.com"
 description: >-
-A personal portfolio showcasing my resume and OCI labs.
-baseurl: "my-portfolio"" # Leave empty for root
-url: "https://mzae.github.io" # Local development URL
+  A personal portfolio showcasing my resume and OCI labs.
+baseurl: "/my-portfolio" # Leave empty for root
+url: "https://mzae.github.io" # GitHub Pages URL
 
 # Theme
-remote_theme: mmistakes/minimal-mistakes
+remote_theme: "mmistakes/minimal-mistakes"
+
+# Plugins (required by Minimal Mistakes and GitHub Pages)
 plugins:
   - jekyll-remote-theme
-
+  - jekyll-archives
+  - jekyll-include-cache
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-seo-tag
 
 # Author profile
 author:
@@ -36,15 +42,6 @@ defaults:
       layout: single
       author_profile: true
 
-# Plugins (required by Minimal Mistakes)
-plugins:
-  - jekyll-include-cache
-# - jekyll-archives
-  - jekyll-paginate
-# - jekyll-sitemap
-  - jekyll-feed
-  - jekyll-seo-tag
-
 # Navigation data
 data_dir: _data
 
@@ -58,7 +55,6 @@ kramdown:
       line_numbers: false
     block:
       line_numbers: true
-
 
 # Exclude folders from build
 exclude:
