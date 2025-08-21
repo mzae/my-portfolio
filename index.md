@@ -11,6 +11,8 @@ Explore:
 ## Welcome to My Portfolio
 - [Resume](./resume/)
 - [Labs Overview](./labs/)
-- [Lab 1: OCI Policies](./labs/labs1/)
+- [Lab 1: OCI Policies](./my-portfolio/labs/labs1/)
+
+
 
 
