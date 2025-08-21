@@ -3,12 +3,14 @@ title: "Wanjama's Portfolio"
 email: your@email.com
 description: >-
   A personal portfolio showcasing my resume and OCI labs.
-baseurl: "" # Leave empty for root
-url: "http://localhost:4000" # Local development URL
+baseurl: "my-portfolio"" # Leave empty for root
+url: "https://mzae.github.io" # Local development URL
 
 # Theme
-theme: minimal-mistakes-jekyll
-minimal_mistakes_skin: "default"
+remote_theme: mmistakes/minimal-mistakes
+plugins:
+  - jekyll-remote-theme
+
 
 # Author profile
 author:
