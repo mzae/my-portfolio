@@ -2,7 +2,7 @@
 title: "Wanjama's Portfolio"
 email: your@email.com
 description: >-
-  A personal portfolio showcasing my resume and OCI labs.
+A personal portfolio showcasing my resume and OCI labs.
 baseurl: "my-portfolio"" # Leave empty for root
 url: "https://mzae.github.io" # Local development URL
 
