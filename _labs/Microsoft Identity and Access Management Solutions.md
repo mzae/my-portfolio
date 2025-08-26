@@ -31,9 +31,9 @@ This lab focused on exploring the capabilities of Microsoft Identity and Access 
 I learned how to enable Microsoft 365 audit log and file monitoring, manage user identities, and ensure compliance with organizational policies.
 
 **Screenshots:**  
-![Admin Login Screenshot](screenshot1.png)  
-![Audit Log Enabled](screenshot2.png)  
-![File Monitoring Enabled](screenshot3.png)  
+![Admin Login Screenshot](/assets/images/labs/lab1_admin_login.png)  
+![Audit Log Enabled](/assets/images/labs/lab1_audit_log_enabled.png)  
+![File Monitoring Enabled](/assets/images/labs/lab1_file_monitoring_enabled.png)  
 
 ---
 
@@ -46,8 +46,8 @@ I learned how to enable Microsoft 365 audit log and file monitoring, manage user
 This lab reinforced how to configure secure self-service password reset (SSPR) in Entra ID, ensuring user autonomy and reducing administrative overhead.
 
 **Screenshots:**  
-![SSPR Configuration](screenshot4.png)  
-![SSPR Test](screenshot5.png)  
+![SSPR Configuration](/assets/images/labs/lab2_sspr_configuration.png)  
+![SSPR Test](/assets/images/labs/lab2_sspr_test.png)  
 
 ---
 
@@ -60,8 +60,8 @@ This lab reinforced how to configure secure self-service password reset (SSPR) i
 I learned how to enhance access control through conditional policies, strengthening identity-based security.
 
 **Screenshots:**  
-![Conditional Access Policy](screenshot6.png)  
-![Policy Enforcement Test](screenshot7.png)  
+![Conditional Access Policy](/assets/images/labs/lab3_conditional_access_policy.png)  
+![Policy Enforcement Test](/assets/images/labs/lab3_policy_enforcement_test.png)  
 
 ---
 
@@ -74,8 +74,8 @@ I learned how to enhance access control through conditional policies, strengthen
 PIM allows secure, time-bound administrative access, reducing the risk of privilege misuse.
 
 **Screenshots:**  
-![PIM Dashboard](screenshot8.png)  
-![JIT Role Assignment](screenshot9.png)  
+![PIM Dashboard](/assets/images/labs/lab4_pim_dashboard.png)  
+![JIT Role Assignment](/assets/images/labs/lab4_jit_role_assignment.png)  
 
 ---
 
@@ -83,5 +83,3 @@ PIM allows secure, time-bound administrative access, reducing the risk of privil
 Through this lab, I gained hands-on experience in Microsoft Identity and Access Management, covering user settings, SSPR, conditional access, and privileged identity management. These skills enhance my ability to implement **Zero Trust principles** and enforce secure access control across cloud environments.
 
 ---
-
-
