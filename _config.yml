@@ -1,6 +1,6 @@
 # Site settings
 title: "Wanjama's Portfolio"
-email: "your@email.com"
+email: "wanjamadaniel69@gmail.com"
 description: >-
   A personal portfolio showcasing my resume and OCI labs.
 baseurl: "/my-portfolio" # Leave empty for root
@@ -23,8 +23,8 @@ author:
   name: "Wanjama"
   avatar: "/assets/images/profile.jpg" # Optional
   bio: "Cloud learner focused on OCI policies, compliance, and infrastructure."
-  location: "Ruiru, Kenya"
-  email: "your@email.com"
+  location: "Nairobi, Kenya"
+  email: "wanjamadaniel69@email.com"
   linkedin: "https://linkedin.com/in/wanjama"
 
 # Collections
