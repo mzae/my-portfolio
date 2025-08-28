@@ -31,7 +31,7 @@ This lab focused on exploring the capabilities of Microsoft Identity and Access 
 I learned how to enable Microsoft 365 audit log and file monitoring, manage user identities, and ensure compliance with organizational policies.
 
 **Screenshots:**  
-![Admin Login Screenshot](/assets/images/labs/lab1_admin_login.png)  
+![Admin Login Screenshot]({{ site.baseurl }}/assets/images/labs/lab1_admin_login.png)
 ![Audit Log Enabled](/assets/images/labs/lab1_audit_log_enabled.png)  
 ![File Monitoring Enabled](/assets/images/labs/lab1_file_monitoring_enabled.png)  
 
