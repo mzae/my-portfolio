@@ -1,4 +1,3 @@
-
 ---
 title: Service Endpoints and Securing Storage  
 layout: default  
