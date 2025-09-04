@@ -1,8 +1,8 @@
 # Site settings
-title: "Wanjama's Portfolio"
+title: "Wanjama's Azure Security Portfolio"
 email: "wanjamadaniel69@gmail.com"
 description: >-
-  A personal portfolio showcasing my resume and OCI labs.
+  A personal portfolio showcasing my resume and Azure cloud security labs.
 baseurl: "/my-portfolio" # Leave empty for root
 url: "https://mzae.github.io" # GitHub Pages URL
 
@@ -22,7 +22,7 @@ plugins:
 author:
   name: "Wanjama"
   avatar: "/assets/images/profile.jpg" # Optional
-  bio: "Cloud learner focused on OCI policies, compliance, and infrastructure."
+  bio: "Cloud security specialist focused on Azure policies, compliance, and infrastructure protection."
   location: "Nairobi, Kenya"
   email: "wanjamadaniel69@email.com"
   linkedin: "https://linkedin.com/in/wanjama"
