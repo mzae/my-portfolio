@@ -102,7 +102,3 @@ This lab demonstrated how Microsoft Entra ID supports secure identity management
 
 - [Microsoft Learn: Identity and Access Management](https://learn.microsoft.com/en-us/entra/)  
 - [Zero Trust Architecture](https://learn.microsoft.com/en-us/security/zero-trust/)  
-```
-
----
-
