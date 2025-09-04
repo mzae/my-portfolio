@@ -5,8 +5,6 @@ date: 2025-08-27
 author: Daniel Wanjama
 ---
 
-# Capabilities of Microsoft Security Solutions
-
 **Student Name:** Daniel Wanjama  
 **Student ID:** ADC-CSS02-25012  
 
@@ -119,3 +117,4 @@ This lab provided hands-on experience with Microsoft’s cloud security ecosyste
 These tools collectively form a layered security approach, protecting Azure environments from evolving threats. The skills gained are directly applicable to real-world scenarios, strengthening my expertise in Azure cloud security.
 
 *Note: Place this Markdown file in the `_labs` directory as `Capabilities_of_Microsoft_Security_Solutions.md`. Ensure screenshots are saved in `assets/images/labs/` with the referenced filenames (e.g., `lab1-nsg-task1-vm-details.png`).*
+
