@@ -70,4 +70,3 @@ This lab demonstrated how to secure Azure Storage using Service Endpoints and NS
 
 - [Azure Storage Security](https://learn.microsoft.com/en-us/azure/storage/common/storage-network-security)  
 - [Microsoft Learn: Virtual Networks](https://learn.microsoft.com/en-us/azure/virtual-network/)  
-```
