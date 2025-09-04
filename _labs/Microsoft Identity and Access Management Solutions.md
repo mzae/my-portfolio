@@ -1,85 +1,108 @@
 ---
-layout: single
-title: "Microsoft Identity and Access Management Solutions"
-permalink: /microsoft-iam-lab/
-author_profile: true
+title: Microsoft Identity and Access Management Solutions  
+layout: default  
+date: 2025-09-04  
 ---
 
-# Microsoft ADC Cybersecurity Skilling Program
+# Lab 2: Microsoft Identity and Access Management Solutions
 
-## Week 2 Lab Assignment – Microsoft Identity and Access Management Solutions
-
-### Student Details
-- **Name:** Daniel Wanjama  
-- **Student ID:** ADC-CSS02-25012  
-- **Program:** Microsoft ADC Cybersecurity Skilling Program  
+**Student Name:** Daniel Wanjama  
+**Student ID:** ADC-CSS02-25012  
 
 ---
 
 ## Introduction
-This lab focused on exploring the capabilities of Microsoft Identity and Access Management Solutions using the Skillable Learn on Demand portal. The primary tool was **Microsoft Entra ID (formerly Azure Active Directory)**, where I performed hands-on tasks to manage and customize user identities, enable security features, and configure access policies.
+
+This lab explores Microsoft Entra ID (formerly Azure Active Directory) and its role in identity and access management. You'll configure user settings, test self-service password reset (SSPR), implement conditional access policies, and manage privileged roles using Privileged Identity Management (PIM).
 
 ---
 
-## Lab 1: Explore Microsoft Entra ID User Settings
-- Logged in as administrator to Microsoft Entra ID portal.
-- Reviewed and modified user settings for assigned accounts.
-- Managed user roles and configured specific access parameters.
-- Ensured audit logging and monitoring capabilities were enabled.
+## Objectives
 
-**Key Learning:**  
-I learned how to enable Microsoft 365 audit log and file monitoring, manage user identities, and ensure compliance with organizational policies.
-
-**Screenshots:**  
-![Admin Login Screenshot]({{ site.baseurl }}/assets/images/labs/lab1_admin_login.png)
-![Audit Log Enabled](/assets/images/labs/lab1_audit_log_enabled.png)  
-![File Monitoring Enabled](/assets/images/labs/lab1_file_monitoring_enabled.png)  
+- Configure and test Self-Service Password Reset (SSPR)  
+- Create and validate Conditional Access policies  
+- Implement Privileged Identity Management (PIM)  
+- Understand Zero Trust principles in identity security  
 
 ---
 
-## Lab 2: Microsoft Entra Self-Service Password Reset
-- Configured and tested self-service password reset for users.
-- Validated authentication methods (e.g., SMS, email, or app-based recovery).
-- Tested user experience for password reset under different scenarios.
+## Walkthrough
 
-**Key Learning:**  
-This lab reinforced how to configure secure self-service password reset (SSPR) in Entra ID, ensuring user autonomy and reducing administrative overhead.
+### 🔐 1. Configure Self-Service Password Reset (SSPR)
 
-**Screenshots:**  
-![SSPR Configuration](/assets/images/labs/lab2_sspr_configuration.png)  
-![SSPR Test](/assets/images/labs/lab2_sspr_test.png)  
+**Steps:**
+1. Navigate to **Microsoft Entra Admin Center** → **Password Reset**  
+2. Enable SSPR for selected users  
+3. Define authentication methods (e.g., email, phone)  
+4. Save and apply settings  
 
----
+**Test:**
+- Sign in as a test user  
+- Click “Forgot Password”  
+- Complete verification steps  
+- Reset password successfully  
 
-## Lab 3: Microsoft Entra Conditional Access
-- Created conditional access policies based on location and device compliance.
-- Tested sign-in scenarios to validate policy enforcement.
-- Enabled MFA for sensitive resources.
-
-**Key Learning:**  
-I learned how to enhance access control through conditional policies, strengthening identity-based security.
-
-**Screenshots:**  
-![Conditional Access Policy](/assets/images/labs/lab3_conditional_access_policy.png)  
-![Policy Enforcement Test](/assets/images/labs/lab3_policy_enforcement_test.png)  
+**Screenshot:**  
+`![lab2_sspr_test.png](/assets/images/labs/lab2_sspr_test.png)`  
+*Caption: SSPR test completed successfully*
 
 ---
 
-## Lab 4: Explore Privileged Identity Management (PIM)
-- Enabled Privileged Identity Management in Microsoft Entra ID.
-- Assigned just-in-time (JIT) privileged roles to administrators.
-- Configured approval workflows for elevated permissions.
+### 🛡️ 2. Create Conditional Access Policy
 
-**Key Learning:**  
-PIM allows secure, time-bound administrative access, reducing the risk of privilege misuse.
+**Steps:**
+1. Go to **Microsoft Entra Admin Center** → **Security** → **Conditional Access**  
+2. Click **+ New Policy**  
+3. Name the policy: `Block Legacy Authentication`  
+4. Assign users/groups  
+5. Select cloud apps (e.g., Microsoft 365)  
+6. Set conditions:  
+   - Client apps: **Legacy authentication clients**  
+7. Grant access: **Block access**  
+8. Enable policy  
 
-**Screenshots:**  
-![PIM Dashboard](/assets/images/labs/lab4_pim_dashboard.png)  
-![JIT Role Assignment](/assets/images/labs/lab4_jit_role_assignment.png)  
+**Validation:**
+- Attempt login using legacy protocol  
+- Confirm access is blocked  
+
+**Screenshot:**  
+`![lab2_conditional_access.png](/assets/images/labs/lab2_conditional_access.png)`  
+*Caption: Conditional Access policy blocking legacy authentication*
+
+---
+
+### 👑 3. Implement Privileged Identity Management (PIM)
+
+**Steps:**
+1. Navigate to **Microsoft Entra Admin Center** → **Roles and Administrators**  
+2. Select a role (e.g., Global Administrator)  
+3. Click **Assign** → **Eligible assignment**  
+4. Configure activation settings (MFA, justification, etc.)  
+5. Save changes  
+
+**Test:**
+- Sign in as eligible user  
+- Activate role  
+- Perform admin task  
+- Role auto-deactivates after time limit  
+
+**Screenshot:**  
+`![lab2_pim_activation.png](/assets/images/labs/lab2_pim_activation.png)`  
+*Caption: PIM role activated with MFA and justification*
 
 ---
 
 ## Conclusion
-Through this lab, I gained hands-on experience in Microsoft Identity and Access Management, covering user settings, SSPR, conditional access, and privileged identity management. These skills enhance my ability to implement **Zero Trust principles** and enforce secure access control across cloud environments.
+
+This lab demonstrated how Microsoft Entra ID supports secure identity management through SSPR, Conditional Access, and PIM. These features align with Zero Trust principles by enforcing least privilege, verifying explicitly, and assuming breach. Proper configuration of these tools strengthens organizational security posture and reduces identity-related risks.
 
 ---
+
+## References
+
+- [Microsoft Learn: Identity and Access Management](https://learn.microsoft.com/en-us/entra/)  
+- [Zero Trust Architecture](https://learn.microsoft.com/en-us/security/zero-trust/)  
+```
+
+---
+
