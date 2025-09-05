@@ -1,18 +1,13 @@
 ---
-title: "Lab 02: Network Security Groups & Application Security Groups"
+title: "Network Security Groups & Application Security Groups"
 layout: lab
-permalink: /labs/network-security-groups-and-application-security-groups/
+permalink: /labs/Network-Security-Groups-and-Application-Security-Groups/
 ---
 
-# 🌐 Lab 02: Network Security Groups & Application Security Groups
+**Student Name:** Daniel Wanjama  
+**Student ID:** ADC-CSS02-25012  
 
-**Student:** Daniel Wanjama  
-**Lab ID:** ADC-CSS02-25012  
-**Program:** Microsoft ADC Cybersecurity Skilling Program  
-
----
-
-## 🧠 Overview
+## Introduction
 
 This lab demonstrates how to secure Azure-based infrastructure using:
 
@@ -21,148 +16,119 @@ This lab demonstrates how to secure Azure-based infrastructure using:
 
 The objective is to isolate and protect two server roles—**Web Servers** and **Management Servers**—with tailored access controls.
 
----
-
-## 🛠️ Lab Objectives
+## Objectives
 
 - Create virtual networking infrastructure  
 - Deploy virtual machines (VMs)  
 - Configure ASGs and NSGs  
 - Validate traffic filtering
 
+## Prerequisites
+
+- Azure subscription  
+- Familiarity with Azure Portal and virtual networks  
+- Access to Azure Cloud Shell or PowerShell  
+
+## Walkthrough
+
+### Task 1: Create Resource Group
+
+Created a new resource group to contain all lab resources.  
+📸 *Screenshot: `resource-group.png` – Resource Group creation*  
+![Resource Group](../../assets/images/labs/resource-group.png)
+
 ---
 
-## 🏗️ Step-by-Step Walkthrough
-
-### 🔹 1. Create Resource Group
-
-Created a new resource group to contain all lab resources.
-
-📸 **Screenshot 1:** Resource Group creation  
-![Resource Group Creation](/assets/lab02/resource-group.png)
-
----
-
-### 🔹 2. Create Virtual Network & Subnets
+### Task 2: Create Virtual Network & Subnets
 
 - Created a virtual network named `LabVNet`  
-- Added two subnets:  
-  - `WebSubnet` for web servers  
-  - `MgmtSubnet` for management servers
-
-📸 **Screenshot 2:** Virtual Network and Subnet configuration  
-![Virtual Network Setup](/assets/lab02/vnet-subnets.png)
+- Added two subnets: `WebSubnet` and `MgmtSubnet`  
+📸 *Screenshot: `vnet-subnets.png` – Virtual Network and Subnet configuration*  
+![Virtual Network](../../assets/images/labs/vnet-subnets.png)
 
 ---
 
-### 🔹 3. Create Application Security Groups (ASGs)
+### Task 3: Create Application Security Groups (ASGs)
 
 - `WebServers-ASG`: For IIS web servers  
-- `MgmtServers-ASG`: For remote management VMs
-
-📸 **Screenshot 3:** ASG creation  
-![ASG Creation](/assets/lab02/asg-setup.png)
+- `MgmtServers-ASG`: For remote management VMs  
+📸 *Screenshot: `asg-setup.png` – ASG creation*  
+![ASG Setup](../../assets/images/labs/asg-setup.png)
 
 ---
 
-### 🔹 4. Deploy Virtual Machines
+### Task 4: Deploy Virtual Machines
 
-#### 🖥️ Web Server VM
+#### Web Server VM
 
 - Deployed VM in `WebSubnet`  
 - Installed IIS  
-- Assigned to `WebServers-ASG`
+- Assigned to `WebServers-ASG`  
+📸 *Screenshot: `web-vm.png` – Web Server VM deployment*  
+![Web VM](../../assets/images/labs/web-vm.png)
 
-📸 **Screenshot 4:** Web Server VM deployment  
-![Web Server VM](/assets/lab02/web-vm.png)
+📸 *Screenshot: `iis-installed.png` – IIS installation confirmation*  
+![IIS Installed](../../assets/images/labs/iis-installed.png)
 
-📸 **Screenshot 5:** IIS installation confirmation  
-![IIS Installed](/assets/lab02/iis-installed.png)
-
-#### 🖥️ Management Server VM
+#### Management Server VM
 
 - Deployed VM in `MgmtSubnet`  
-- Assigned to `MgmtServers-ASG`
-
-📸 **Screenshot 6:** Management Server VM deployment  
-![Mgmt Server VM](/assets/lab02/mgmt-vm.png)
+- Assigned to `MgmtServers-ASG`  
+📸 *Screenshot: `mgmt-vm.png` – Management Server VM deployment*  
+![Mgmt VM](../../assets/images/labs/mgmt-vm.png)
 
 ---
 
-### 🔹 5. Configure Network Security Groups (NSGs)
+### Task 5: Configure Network Security Groups (NSGs)
 
-#### 🔐 NSG for Web Server
+#### NSG for Web Server
 
 - Allow inbound HTTP (port 80) from internet  
-- Deny inbound RDP (port 3389)
+- Deny inbound RDP (port 3389)  
+📸 *Screenshot: `web-nsg-rules.png` – NSG rules for Web Server*  
+![Web NSG](../../assets/images/labs/web-nsg-rules.png)
 
-📸 **Screenshot 7:** NSG rules for Web Server  
-![Web NSG Rules](/assets/lab02/web-nsg-rules.png)
-
-#### 🔐 NSG for Management Server
+#### NSG for Management Server
 
 - Allow inbound RDP (port 3389) from trusted IP  
-- Deny all other inbound traffic
-
-📸 **Screenshot 8:** NSG rules for Management Server  
-![Mgmt NSG Rules](/assets/lab02/mgmt-nsg-rules.png)
-
----
-
-### 🔹 6. Associate NSGs with Subnets
-
-Linked NSGs to respective subnets to enforce traffic rules.
-
-📸 **Screenshot 9:** NSG association with subnets  
-![NSG Subnet Association](/assets/lab02/nsg-subnet-link.png)
+- Deny all other inbound traffic  
+📸 *Screenshot: `mgmt-nsg-rules.png` – NSG rules for Management Server*  
+![Mgmt NSG](../../assets/images/labs/mgmt-nsg-rules.png)
 
 ---
 
-### 🔹 7. Validate Connectivity
+### Task 6: Associate NSGs with Subnets
+
+Linked NSGs to respective subnets to enforce traffic rules.  
+📸 *Screenshot: `nsg-subnet-link.png` – NSG association with subnets*  
+![NSG Subnet Link](../../assets/images/labs/nsg-subnet-link.png)
+
+---
+
+### Task 7: Validate Connectivity
 
 - Accessed Web Server via browser to confirm HTTP access  
 - Attempted RDP to Web Server (denied)  
-- Successfully connected to Management Server via RDP
+- Successfully connected to Management Server via RDP  
 
-📸 **Screenshot 10:** HTTP access to Web Server  
-![Web Server HTTP Access](/assets/lab02/http-access.png)
+📸 *Screenshot: `http-access.png` – HTTP access to Web Server*  
+![HTTP Access](../../assets/images/labs/http-access.png)
 
-📸 **Screenshot 11:** RDP denied to Web Server  
-![RDP Denied](/assets/lab02/rdp-denied.png)
+📸 *Screenshot: `rdp-denied.png` – RDP denied to Web Server*  
+![RDP Denied](../../assets/images/labs/rdp-denied.png)
 
-📸 **Screenshot 12:** RDP access to Management Server  
-![RDP Success](/assets/lab02/rdp-success.png)
-
----
-
-## ✅ Key Takeaways
-
-- ASGs simplify rule management by grouping VMs logically  
-- NSGs enforce traffic control based on server roles  
-- Security posture improved by minimizing attack surface  
-- Hands-on experience with Azure-native tools for cloud security
+📸 *Screenshot: `rdp-success.png` – RDP access to Management Server*  
+![RDP Success](../../assets/images/labs/rdp-success.png)
 
 ---
 
-## 📁 Portfolio Value
+## Conclusion
 
-This lab showcases:
+This lab provided hands-on experience with Azure-native security tools, focusing on NSGs and ASGs to enforce traffic control and role-based access. Key takeaways include:
 
-- Real-world Azure security configurations  
-- Role-based access control using NSGs and ASGs  
-- Practical understanding of cloud infrastructure hardening  
-- Clean documentation for recruiters and collaborators
+- Using ASGs to simplify rule management  
+- Applying NSGs to enforce traffic policies  
+- Validating connectivity and access restrictions  
 
----
+These skills are directly applicable to real-world cloud security scenarios and strengthen my expertise in Azure infrastructure protection.
 
-## 🔗 Related Labs
-
-- [Lab 01: Azure Resource Management](/labs/lab01-azure-resource-management.md)  
-- [Lab 03: Identity & Access Management](/labs/lab03-identity-access-management.md)
-
----
-
-## 🧾 Author Notes
-
-This walkthrough is part of my cybersecurity lab portfolio.  
-For more labs and scripts, visit [my GitHub profile](https://github.com/your-username)
