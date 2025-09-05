@@ -4,7 +4,7 @@ title: "Welcome"
 author_profile: true  
 ---
 
-Hi, I'm **Wanjama** — an Azure cloud security enthusiast with a sharp eye for identity, access, and automation.  
+Hi, I'm ** Daniel Wanjama** — an Azure cloud security enthusiast with a sharp eye for identity, access, and automation.  
 This portfolio is a living showcase of my journey through Microsoft Entra ID, Zero Trust architecture, and secure infrastructure design.
 
 From scripting bulletproof file organizers to documenting real-world labs on Conditional Access, Privileged Identity Management, and secure storage endpoints — I’m building a toolkit that’s not just functional, but resilient.
