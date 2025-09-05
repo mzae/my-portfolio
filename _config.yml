@@ -20,12 +20,12 @@ plugins:
 
 # Author profile
 author:
-  name: "Wanjama"
+  name: "Daniel Wanjama"
   avatar: "/assets/images/profile.jpg" # Optional
   bio: "Cloud security specialist focused on Azure policies, compliance, and infrastructure protection."
   location: "Nairobi, Kenya"
   email: "wanjamadaniel69@email.com"
-  linkedin: "https://linkedin.com/in/wanjama"
+  linkedin: "https://linkedin.com/in/dennis1wanjama"
 
 # Collections
 collections:
