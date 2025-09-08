@@ -39,7 +39,7 @@ This lab explores Microsoft’s cloud security tools, including Microsoft 365 te
 3. Associate it with the VM’s network interface card (NIC).
 4. Add an inbound rule to allow RDP (port `3389`).
    - *Screenshot: [lab1-nsg-task2-create-nsg.png](/assets/images/labs/lab1-nsg-task2-create-nsg.png) - Creating NSG.*
-   - *Screenshot: - ![Adding RDP rule](../assets/images/labs/lab1-nsg-task2-add-rdp-rule.png)- Adding RDP rule.*
+   - *Screenshot: - ![Adding RDP rule](/assets/images/labs/lab1-nsg-task2-add-rdp-rule.png)- Adding RDP rule.*
 
 #### Task 3: Test RDP and Outbound Access
 1. Use the **Check Access** feature to verify RDP connectivity.
@@ -117,5 +117,6 @@ This lab provided hands-on experience with Microsoft’s cloud security ecosyste
 These tools collectively form a layered security approach, protecting Azure environments from evolving threats. The skills gained are directly applicable to real-world scenarios, strengthening my expertise in Azure cloud security.
 
 *Note: Place this Markdown file in the `_labs` directory as `Capabilities_of_Microsoft_Security_Solutions.md`. Ensure screenshots are saved in `assets/images/labs/` with the referenced filenames (e.g., `lab1-nsg-task1-vm-details.png`).*
+
 
 
