@@ -1,6 +1,6 @@
 ---
 title: Microsoft Identity and Access Management Solutions  
-layout: default  
+layout: single  
 date: 2025-09-04  
 ---
 
