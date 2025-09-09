@@ -1,6 +1,10 @@
-| title | layout | permalink |
-| ----- | ------ | --------- |
-| Microsoft Identity and Access Management Solutions | lab | /labs/microsoft-identity-and-access-management-solutions/ |
+---
+title: "Microsoft Identity and Access Management Solutions"
+layout: lab
+permalink: /labs/microsoft-identity-and-access-management-solutions/
+author: Daniel Wanjama
+date: 2025-09-09
+---
 
 **Student Name:** Daniel Wanjama  
 **Student ID:** ADC-CSS02-25012  
@@ -146,9 +150,4 @@ This lab explores core components of Microsoft’s identity and access managemen
 
 ---
 
-## Conclusion
-
-This lab provided hands-on experience with Microsoft’s identity and access management tools. I configured user settings, enabled audit logging, implemented SSPR, enforced Conditional Access policies, and managed privileged roles using PIM. These tasks reinforced key concepts in identity governance, Zero Trust, and secure access control—critical for protecting cloud environments.
-
----
-
+Let me know if you'd like a YAML template you can reuse for future labs, or a script to auto-generate image references based on filenames. I’ve got you covered.
