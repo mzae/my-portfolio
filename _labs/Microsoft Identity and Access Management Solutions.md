@@ -1,6 +1,6 @@
 ---
 title: Microsoft Identity and Access Management Solutions  
-layout: single  
+layout: lab
 date: 2025-09-04  
 ---
 
