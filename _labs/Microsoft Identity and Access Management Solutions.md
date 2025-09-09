@@ -149,5 +149,3 @@ This lab explores core components of Microsoft’s identity and access managemen
 [![Audit Log](../../assets/images/labs/pim-audit-log.png)](../../assets/images/labs/pim-audit-log.png)
 
 ---
-
-Let me know if you'd like a YAML template you can reuse for future labs, or a script to auto-generate image references based on filenames. I’ve got you covered.
