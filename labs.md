@@ -1,5 +1,5 @@
 ---
-layout: archive
+layout: single
 title: "Labs"
 permalink: /labs/
 author_profile: true
