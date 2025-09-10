@@ -1,6 +1,6 @@
 ---
 title: "Capabilities of Microsoft Security Solutions"
-layout: archive
+layout: lab
 date: 2025-08-27
 author: Daniel Wanjama
 ---
@@ -157,5 +157,6 @@ This lab explores Microsoft’s cloud security tools, including Microsoft 365 te
 ![Configuring policy controls](../../assets/images/labs/lab4-defender-apps-policy-controls.png)
 
 ---
+
 
 
