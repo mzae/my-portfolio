@@ -1,55 +1,84 @@
-## 🔧 Exercise 1: Deploy Base Infrastructure via ARM Template
+---
+title: "Azure Key Vault & Always Encrypted"
+layout: lab
+permalink: /labs/Azure-Key-Vault-and-Always-Encrypted/
+---
 
-### Step 1: Deploy Custom Template
-Navigate to Azure Portal → Search “Deploy a custom template”.  
-![Custom Deployment](assets/images/lab7/01-custom-deployment.png)
+**Student Name:** Daniel Wanjama  
+**Student ID:** ADC-CSS02-25012  
 
-### Step 2: Load ARM Template
-Load `az-500-10_azuredeploy.json` into the editor and deploy the resources.  
-![Load Template](assets/images/lab7/02-load-template.png)
+## Introduction
+
+This lab demonstrates how to secure sensitive data in Azure SQL Database using:
+
+- **Azure Key Vault** to manage encryption keys and secrets  
+- **Always Encrypted** to protect sensitive columns in SQL Server  
+
+The objective is to deploy infrastructure, configure secure key management, and encrypt SQL data using client-side encryption backed by Azure Key Vault.
+
+## Objectives
+
+- Deploy virtual infrastructure using ARM templates  
+- Create and configure Azure Key Vault  
+- Register an application and assign access policies  
+- Encrypt SQL columns using Always Encrypted  
+- Validate encryption and key storage
+
+## Prerequisites
+
+- Azure subscription  
+- Familiarity with Azure Portal and PowerShell  
+- Access to Azure Cloud Shell or local PowerShell  
+- SQL Server Management Studio (SSMS) installed on VM  
+
+## Walkthrough
+
+### Task 1: Deploy Infrastructure via ARM Template
+
+Deployed a virtual machine and SQL Database using a custom ARM template.  
+📸 *Screenshot: `01-custom-deployment.png` – Custom template deployment*  
+![Custom Deployment](../../assets/images/lab7/01-custom-deployment.png)
+
+📸 *Screenshot: `02-load-template.png` – Template loaded into editor*  
+![Load Template](../../assets/images/lab7/02-load-template.png)
 
 ---
 
-## 🔐 Exercise 2: Configure Azure Key Vault
+### Task 2: Create Azure Key Vault
 
-### Step 3: Create Key Vault via PowerShell
-Use PowerShell to create a new Key Vault with a unique name.
-
-```powershell
-$kvName = 'az500kv' + $(Get-Random)
-New-AzKeyVault -VaultName $kvName -ResourceGroupName '<YourResourceGroup>'
-```
-
-![Create Key Vault](assets/images/lab7/04-create-keyvault.png)
-
-### Step 4: Add Access Policy
-Grant permissions to manage keys and secrets.
-
-![Access Policy](assets/images/lab7/06-access-policy.png)
-
-### Step 5: Add Key and Secret to Vault
-Create a key named `MyLabKey` and a secret named `SQLPassword`.
-
-```powershell
-Add-AZKeyVaultKey -VaultName $kvName -Name 'MyLabKey' -Destination 'Software'
-
-$secretvalue = ConvertTo-SecureString 'Pa55w.rd1234' -AsPlainText -Force
-Set-AZKeyVaultSecret -VaultName $kvName -Name 'SQLPassword' -SecretValue $secretvalue
-```
-
-![Add Secret](assets/images/lab7/09-add-secret.png)
+Used PowerShell to create a new Key Vault with a unique name.  
+📸 *Screenshot: `04-create-keyvault.png` – Key Vault creation via PowerShell*  
+![Create Key Vault](../../assets/images/lab7/04-create-keyvault.png)
 
 ---
 
-## 🧩 Exercise 3: Register Application and Configure Access
+### Task 3: Configure Access Policies
 
-### Step 6: Register App in Microsoft Entra ID
-Create an app registration named `sqlApp` and generate a client secret.
+Granted permissions to manage keys and secrets.  
+📸 *Screenshot: `06-access-policy.png` – Access policy configuration*  
+![Access Policy](../../assets/images/lab7/06-access-policy.png)
 
-![App Registration](assets/images/lab7/11-app-registration.png)
+---
 
-### Step 7: Grant App Access to Key Vault
-Use PowerShell to assign access to the registered app.
+### Task 4: Add Key and Secret to Vault
+
+Created a key named `MyLabKey` and a secret named `SQLPassword`.  
+📸 *Screenshot: `09-add-secret.png` – Secret added to Key Vault*  
+![Add Secret](../../assets/images/lab7/09-add-secret.png)
+
+---
+
+### Task 5: Register Application in Entra ID
+
+Registered an app named `sqlApp` and generated a client secret.  
+📸 *Screenshot: `11-app-registration.png` – App registration in Entra ID*  
+![App Registration](../../assets/images/lab7/11-app-registration.png)
+
+---
+
+### Task 6: Grant App Access to Key Vault
+
+Used PowerShell to assign access to the registered app.
 
 ```powershell
 Set-AZKeyVaultAccessPolicy -VaultName $kvName -ServicePrincipalName $applicationId -PermissionsToSecrets get, list
@@ -57,15 +86,17 @@ Set-AZKeyVaultAccessPolicy -VaultName $kvName -ServicePrincipalName $application
 
 ---
 
-## 🖥️ Exercise 4: Encrypt SQL Columns with Always Encrypted
+### Task 7: Connect to SQL Server via SSMS
 
-### Step 8: Connect to SQL Server via SSMS
-Use RDP to access the VM and connect to SQL Server using SSMS.
+Used RDP to access the VM and connected to SQL Server using SSMS.  
+📸 *Screenshot: `14-connect-ssms.png` – SSMS connection to SQL Server*  
+![Connect SSMS](../../assets/images/lab7/14-connect-ssms.png)
 
-![Connect SSMS](assets/images/lab7/14-connect-ssms.png)
+---
 
-### Step 9: Create Patients Table
-Define a table with sensitive columns like SSN and BirthDate.
+### Task 8: Create Patients Table
+
+Created a table with sensitive columns to be encrypted.
 
 ```sql
 CREATE TABLE [dbo].[Patients] (
@@ -78,48 +109,28 @@ CREATE TABLE [dbo].[Patients] (
 );
 ```
 
-### Step 10: Use Always Encrypted Wizard
-Right-click the table → Encrypt Columns → Select `SSN` and `BirthDate`.
+---
 
-![Encrypt Columns](assets/images/lab7/16-encrypt-columns.png)
+### Task 9: Use Always Encrypted Wizard
 
-### Step 11: Configure Master Key with Azure Key Vault
-Sign in and select your Key Vault to store the encryption key.
-
-![Master Key Config](assets/images/lab7/17-master-key-config.png)
-
-### Step 12: Complete Encryption Wizard
-Review summary and finish the encryption process.
-
-![Encryption Summary](assets/images/lab7/18-encryption-summary.png)
+Used SSMS wizard to encrypt `SSN` and `BirthDate` columns.  
+📸 *Screenshot: `16-encrypt-columns.png` – Column encryption wizard*  
+![Encrypt Columns](../../assets/images/lab7/16-encrypt-columns.png)
 
 ---
 
-## ✅ Final Result
+### Task 10: Configure Master Key with Azure Key Vault
 
-You’ve successfully:
-- Deployed infrastructure using ARM templates.
-- Configured Azure Key Vault with keys and secrets.
-- Registered and secured an app with access policies.
-- Encrypted sensitive SQL columns using Always Encrypted.
-
-Your data is now protected both at rest and in transit, with keys securely managed in Azure Key Vault.
+Selected Azure Key Vault as the key store during encryption setup.  
+📸 *Screenshot: `17-master-key-config.png` – Master key configuration*  
+![Master Key Config](../../assets/images/lab7/17-master-key-config.png)
 
 ---
 
-## 🔗 Key Vault URIs (Examples)
-- Vault URI: `https://<vaultname>.vault.azure.net/`
-- Key Identifier: `https://<vaultname>.vault.azure.net/keys/MyLabKey/<version>`
-- Secret URI: `https://<vaultname>.vault.azure.net/secrets/SQLPassword/<version>`
+### Task 11: Complete Encryption Wizard
 
----
-
-## 👨‍💻 Author
-
-**Daniel Wanjama**  
-Student ID: ADC-CSS02-25012  
-Cyber Shujaa Program  
-Location: Nairobi, Kenya
-```
+Reviewed summary and completed encryption process.  
+📸 *Screenshot: `18-encryption-summary.png` – Encryption summary*  
+![Encryption Summary](../../assets/images/lab7/18-encryption-summary.png)
 
 ---
