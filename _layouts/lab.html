@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>{{ page.title }}</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
-  {% include head.html %}
-</head>
-<body>
-  {% include header.html %}
+  <head>
+    <meta charset="UTF-8">
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+    {% include skip-links.html %}
+    {% include head.html %}
+  </head>
+  <body>
+    {% include masthead.html %}
 
-  <main class="lab-content" role="main">
-    <article class="lab-article">
-      <header>
-        <h1>{{ page.title }}</h1>
-      </header>
-      <section class="lab-body">
-        {{ content }}
-      </section>
-    </article>
-  </main>
+    <main class="lab-content" role="main">
+      <article class="lab-article">
+        <header>
+          <h1>{{ page.title }}</h1>
+          {% if page.subtitle %}
+            <p class="subtitle">{{ page.subtitle }}</p>
+          {% endif %}
+        </header>
 
-  {% include footer.html %}
-</body>
+        <section class="lab-body">
+          {{ content }}
+        </section>
+      </article>
+    </main>
+
+    {% include footer.html %}
+  </body>
 </html>
