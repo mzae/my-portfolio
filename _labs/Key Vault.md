@@ -1,6 +1,6 @@
 ---
 title: "Azure Key Vault & Always Encrypted"
-layout: lab
+layout: archive
 permalink: /labs/Azure-Key-Vault-and-Always-Encrypted/
 ---
 
