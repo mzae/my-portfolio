@@ -1,5 +1,5 @@
 ---
-layout: home  
+layout: lab  
 title: "Welcome"  
 author_profile: true  
 ---
