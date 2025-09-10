@@ -1,6 +1,6 @@
 ---
 title: Service Endpoints and Securing Storage  
-layout: default  
+layout: archive  
 date: 2025-09-04  
 ---
 
