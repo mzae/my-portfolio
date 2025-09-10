@@ -1,6 +1,6 @@
 ---
 title: "Microsoft Identity and Access Management Solutions"
-layout: lab
+layout: archive
 permalink: /labs/microsoft-identity-and-access-management-solutions/
 author: Daniel Wanjama
 date: 2025-09-09
