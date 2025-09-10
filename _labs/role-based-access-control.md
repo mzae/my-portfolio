@@ -1,6 +1,6 @@
 ---
 title: Role-Based Access Control in Azure  
-layout: default  
+layout: archive 
 date: 2025-09-04  
 ---
 
