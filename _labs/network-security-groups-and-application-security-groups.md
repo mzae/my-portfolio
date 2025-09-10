@@ -1,6 +1,6 @@
 ---
 title: "Network Security Groups & Application Security Groups"
-layout: lab
+layout: archive
 permalink: /labs/Network-Security-Groups-and-Application-Security-Groups/
 ---
 
