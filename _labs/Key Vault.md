@@ -37,10 +37,10 @@ The objective is to deploy infrastructure, configure secure key management, and 
 
 Deployed a virtual machine and SQL Database using a custom ARM template.  
 📸 *Screenshot: `01-custom-deployment.png` – Custom template deployment*  
-![Custom Deployment](../../assets/images/lab7/01-custom-deployment.png)
+![Custom Deployment](../../assets/images/labs/01-custom-deployment.png)
 
 📸 *Screenshot: `02-load-template.png` – Template loaded into editor*  
-![Load Template](../../assets/images/lab7/02-load-template.png)
+![Load Template](../../assets/images/labs/02-load-template.png)
 
 ---
 
@@ -48,7 +48,7 @@ Deployed a virtual machine and SQL Database using a custom ARM template.
 
 Used PowerShell to create a new Key Vault with a unique name.  
 📸 *Screenshot: `04-create-keyvault.png` – Key Vault creation via PowerShell*  
-![Create Key Vault](../../assets/images/lab7/04-create-keyvault.png)
+![Create Key Vault](../../assets/images/labs/04-create-keyvault.png)
 
 ---
 
@@ -56,7 +56,7 @@ Used PowerShell to create a new Key Vault with a unique name.
 
 Granted permissions to manage keys and secrets.  
 📸 *Screenshot: `06-access-policy.png` – Access policy configuration*  
-![Access Policy](../../assets/images/lab7/06-access-policy.png)
+![Access Policy](../../assets/images/labs/06-access-policy.png)
 
 ---
 
@@ -64,7 +64,7 @@ Granted permissions to manage keys and secrets.
 
 Created a key named `MyLabKey` and a secret named `SQLPassword`.  
 📸 *Screenshot: `09-add-secret.png` – Secret added to Key Vault*  
-![Add Secret](../../assets/images/lab7/09-add-secret.png)
+![Add Secret](../../assets/images/labs/09-add-secret.png)
 
 ---
 
@@ -72,7 +72,7 @@ Created a key named `MyLabKey` and a secret named `SQLPassword`.
 
 Registered an app named `sqlApp` and generated a client secret.  
 📸 *Screenshot: `11-app-registration.png` – App registration in Entra ID*  
-![App Registration](../../assets/images/lab7/11-app-registration.png)
+![App Registration](../../assets/images/labs/11-app-registration.png)
 
 ---
 
@@ -90,7 +90,7 @@ Set-AZKeyVaultAccessPolicy -VaultName $kvName -ServicePrincipalName $application
 
 Used RDP to access the VM and connected to SQL Server using SSMS.  
 📸 *Screenshot: `14-connect-ssms.png` – SSMS connection to SQL Server*  
-![Connect SSMS](../../assets/images/lab7/14-connect-ssms.png)
+![Connect SSMS](../../assets/images/labs/14-connect-ssms.png)
 
 ---
 
@@ -115,7 +115,7 @@ CREATE TABLE [dbo].[Patients] (
 
 Used SSMS wizard to encrypt `SSN` and `BirthDate` columns.  
 📸 *Screenshot: `16-encrypt-columns.png` – Column encryption wizard*  
-![Encrypt Columns](../../assets/images/lab7/16-encrypt-columns.png)
+![Encrypt Columns](../../assets/images/labs/16-encrypt-columns.png)
 
 ---
 
@@ -123,7 +123,7 @@ Used SSMS wizard to encrypt `SSN` and `BirthDate` columns.
 
 Selected Azure Key Vault as the key store during encryption setup.  
 📸 *Screenshot: `17-master-key-config.png` – Master key configuration*  
-![Master Key Config](../../assets/images/lab7/17-master-key-config.png)
+![Master Key Config](../../assets/images/labs/17-master-key-config.png)
 
 ---
 
@@ -131,6 +131,6 @@ Selected Azure Key Vault as the key store during encryption setup.
 
 Reviewed summary and completed encryption process.  
 📸 *Screenshot: `18-encryption-summary.png` – Encryption summary*  
-![Encryption Summary](../../assets/images/lab7/18-encryption-summary.png)
+![Encryption Summary](../../assets/images/labs/18-encryption-summary.png)
 
 ---
