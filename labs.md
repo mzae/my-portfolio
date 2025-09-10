@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: lab
 title: "Labs"
 permalink: /labs/
 author_profile: true
