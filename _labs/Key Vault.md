@@ -1,136 +1,105 @@
 ---
-title: "Azure Key Vault & Always Encrypted"
+title: "Azure Firewall Configuration and Testing"
 layout: lab
-permalink: /labs/Azure-Key-Vault-and-Always-Encrypted/
+permalink: /labs/azure-firewall-configuration/
+author: Daniel Wanjama
+date: 2025-09-12
 ---
 
 **Student Name:** Daniel Wanjama  
 **Student ID:** ADC-CSS02-25012  
 
+---
+
 ## Introduction
 
-This lab demonstrates how to secure sensitive data in Azure SQL Database using:
+This lab explores the deployment and configuration of Azure Firewall using the Learn on Demand portal. Azure Firewall provides centralized, scalable, and stateful network security for cloud environments. The lab covers key tasks including firewall deployment, routing, rule creation, DNS setup, and traffic validation.
 
-- **Azure Key Vault** to manage encryption keys and secrets  
-- **Always Encrypted** to protect sensitive columns in SQL Server  
-
-The objective is to deploy infrastructure, configure secure key management, and encrypt SQL data using client-side encryption backed by Azure Key Vault.
+---
 
 ## Objectives
 
-- Deploy virtual infrastructure using ARM templates  
-- Create and configure Azure Key Vault  
-- Register an application and assign access policies  
-- Encrypt SQL columns using Always Encrypted  
-- Validate encryption and key storage
+- Deploy Azure Firewall using an ARM template  
+- Configure User Defined Routes (UDRs)  
+- Create application and network rules  
+- Set up DNS server integration  
+- Test firewall functionality  
+
+---
 
 ## Prerequisites
 
-- Azure subscription  
-- Familiarity with Azure Portal and PowerShell  
-- Access to Azure Cloud Shell or local PowerShell  
-- SQL Server Management Studio (SSMS) installed on VM  
+- Skillable lab access  
+- Azure subscription with admin privileges  
+- Familiarity with virtual networks and routing  
+
+---
 
 ## Walkthrough
 
-### Task 1: Deploy Infrastructure via ARM Template
+### Task 1: Deploy Lab Environment
 
-Deployed a virtual machine and SQL Database using a custom ARM template.  
-📸 *Screenshot: `01-custom-deployment.png` – Custom template deployment*  
-![Custom Deployment](../../assets/images/labs/01-custom-deployment.png)
+- Used ARM template to provision virtual network, subnets, and resources  
+- Verified deployment via Azure Portal  
 
-📸 *Screenshot: `02-load-template.png` – Template loaded into editor*  
-![Load Template](../../assets/images/labs/02-load-template.png)
+![ARM template deployment overview](../../assets/images/labs/task1-arm-template-deployment.png)
 
 ---
 
-### Task 2: Create Azure Key Vault
+### Task 2: Deploy Azure Firewall
 
-Used PowerShell to create a new Key Vault with a unique name.  
-📸 *Screenshot: `04-create-keyvault.png` – Key Vault creation via PowerShell*  
-![Create Key Vault](../../assets/images/labs/04-create-keyvault.png)
+- Navigated to **Firewall Manager**  
+- Created Azure Firewall in the designated subnet  
+- Verified firewall provisioning status  
 
----
-
-### Task 3: Configure Access Policies
-
-Granted permissions to manage keys and secrets.  
-📸 *Screenshot: `06-access-policy.png` – Access policy configuration*  
-![Access Policy](../../assets/images/labs/06-access-policy.png)
+![Azure Firewall creation](../../assets/images/labs/task2-firewall-deployment.png)
 
 ---
 
-### Task 4: Add Key and Secret to Vault
+### Task 3: Configure Default Route (UDR)
 
-Created a key named `MyLabKey` and a secret named `SQLPassword`.  
-📸 *Screenshot: `09-add-secret.png` – Secret added to Key Vault*  
-![Add Secret](../../assets/images/labs/09-add-secret.png)
+- Created User Defined Route to redirect traffic through firewall  
+- Associated route table with subnet  
 
----
-
-### Task 5: Register Application in Entra ID
-
-Registered an app named `sqlApp` and generated a client secret.  
-📸 *Screenshot: `11-app-registration.png` – App registration in Entra ID*  
-![App Registration](../../assets/images/labs/11-app-registration.png)
+![UDR configuration](../../assets/images/labs/task3-udr-creation.png)  
+![Route table association](../../assets/images/labs/task3-route-table-association.png)
 
 ---
 
-### Task 6: Grant App Access to Key Vault
+### Task 4: Create Application Rules
 
-Used PowerShell to assign access to the registered app.
+- Defined Layer 7 rules for FQDN-based access  
+- Allowed traffic to `*.microsoft.com` and `*.github.com`  
 
-```powershell
-Set-AZKeyVaultAccessPolicy -VaultName $kvName -ServicePrincipalName $applicationId -PermissionsToSecrets get, list
-```
-
----
-
-### Task 7: Connect to SQL Server via SSMS
-
-Used RDP to access the VM and connected to SQL Server using SSMS.  
-📸 *Screenshot: `14-connect-ssms.png` – SSMS connection to SQL Server*  
-![Connect SSMS](../../assets/images/labs/14-connect-ssms.png)
+![Application rule configuration](../../assets/images/labs/task4-application-rules.png)
 
 ---
 
-### Task 8: Create Patients Table
+### Task 5: Create Network Rules
 
-Created a table with sensitive columns to be encrypted.
+- Configured Layer 3/4 rules for IP and port-based access  
+- Allowed TCP traffic on port 443 to specific IP ranges  
 
-```sql
-CREATE TABLE [dbo].[Patients] (
-  [PatientId] INT IDENTITY(1,1),
-  [SSN] CHAR(11) NOT NULL,
-  [FirstName] NVARCHAR(50),
-  [LastName] NVARCHAR(50),
-  [BirthDate] DATE NOT NULL,
-  PRIMARY KEY CLUSTERED ([PatientId])
-);
-```
+![Network rule setup](../../assets/images/labs/task5-network-rules.png)
 
 ---
 
-### Task 9: Use Always Encrypted Wizard
+### Task 6: Configure DNS Server
 
-Used SSMS wizard to encrypt `SSN` and `BirthDate` columns.  
-📸 *Screenshot: `16-encrypt-columns.png` – Column encryption wizard*  
-![Encrypt Columns](../../assets/images/labs/16-encrypt-columns.png)
+- Enabled DNS proxy on Azure Firewall  
+- Verified DNS resolution for outbound traffic  
 
----
-
-### Task 10: Configure Master Key with Azure Key Vault
-
-Selected Azure Key Vault as the key store during encryption setup.  
-📸 *Screenshot: `17-master-key-config.png` – Master key configuration*  
-![Master Key Config](../../assets/images/labs/17-master-key-config.png)
+![DNS proxy configuration](../../assets/images/labs/task6-dns-settings.png)
 
 ---
 
-### Task 11: Complete Encryption Wizard
+### Task 7: Test Firewall Functionality
 
-Reviewed summary and completed encryption process.  
-📸 *Screenshot: `18-encryption-summary.png` – Encryption summary*  
-![Encryption Summary](../../assets/images/labs/18-encryption-summary.png)
+- Validated access to allowed domains  
+- Confirmed blocked traffic for unauthorized destinations  
+- Used VM browser and command-line tools for testing  
+
+![Successful access test](../../assets/images/labs/task7-allowed-traffic-test.png)  
+![Blocked traffic confirmation](../../assets/images/labs/task7-blocked-traffic-test.png)
 
 ---
