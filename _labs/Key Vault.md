@@ -1,7 +1,7 @@
 ---
 title: "Azure Firewall Configuration and Testing"
 layout: lab
-permalink: permalink: /labs/azure-key-vault-encryption/
+permalink: /labs/azure-key-vault-encryption/
 author: Daniel Wanjama
 date: 2025-09-12
 ---
