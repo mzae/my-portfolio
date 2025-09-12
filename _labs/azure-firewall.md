@@ -1,7 +1,7 @@
 ---
 title: "Azure Firewall Configuration and Testing"
 layout: lab
-permalink: /labs/azure-firewall-configuration/
+permalink: /labs/azure-firewall/
 author: Daniel Wanjama
 date: 2025-09-12
 ---
