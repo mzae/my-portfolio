@@ -117,6 +117,3 @@ This lab demonstrates how to secure Azure virtual machines using **Network Secur
 - Role-based access improves security posture in cloud environments  
 
 ---
-```
-
-Let me know if you'd like me to help generate the YAML for your `_data/labs.yml` file or automate image uploads next. You're building a seriously clean and scalable portfolio!
