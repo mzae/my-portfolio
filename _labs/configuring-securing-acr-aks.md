@@ -1,14 +1,14 @@
 ---
-title: "Configuring and Securing Azure Container Registry (ACR) and Azure Kubernetes Service (AKS)"
+title: "Full Lab: Configuring and Securing Azure Container Registry (ACR) and Azure Kubernetes Service (AKS)"
 layout: lab
-permalink: /labs/configuring-securing-acr-aks/
+permalink: /labs/full-acr-aks-walkthrough/
 author: Daniel Wanjama
 date: 2025-09-17
 ---
 
 ## Introduction
 
-This lab provides a complete walkthrough of deploying and securing containerized workloads using **Azure Container Registry (ACR)** and **Azure Kubernetes Service (AKS)**. It covers image creation, secure registry access, AKS deployment, role assignments, service exposure, and validation steps. Screenshots are included to document the full lifecycle of the solution.
+This lab was completed as part of the Microsoft ADC Cybersecurity Skilling Program. It focuses on configuring and securing Azure Container Registry (ACR) and Azure Kubernetes Service (AKS). The goal was to gain hands-on experience deploying containerized applications in Azure, managing access controls, and applying cloud-native security practices.
 
 ---
 
@@ -21,15 +21,7 @@ This lab provides a complete walkthrough of deploying and securing containerized
 - Deploy external and internal Kubernetes services  
 - Validate access, networking, and dashboard visibility  
 - Apply YAML configurations and verify updates  
-- Perform final validation and cleanup  
-
----
-
-## Prerequisites
-
-- Azure subscription with admin access  
-- Docker installed locally or in lab environment  
-- Familiarity with Azure CLI, Kubernetes, and YAML  
+- Perform resource cleanup and reflect on key learnings  
 
 ---
 
@@ -39,7 +31,7 @@ This lab provides a complete walkthrough of deploying and securing containerized
 
 - Created private ACR instance named `acrsecuritylab`  
 - Selected Basic SKU and East Africa region  
-📸 *Screenshot: `acr-creation.png` – ACR instance created*  
+📸 *Screenshot: `acr-creation.png`*  
 ![ACR Creation](../../assets/images/labs/acr-creation.png)
 
 ---
@@ -49,7 +41,7 @@ This lab provides a complete walkthrough of deploying and securing containerized
 - Built Nginx image using Dockerfile  
 - Tagged image with ACR login server  
 - Pushed image to ACR using Docker CLI  
-📸 *Screenshot: `docker-push-acr.png` – Docker image pushed to ACR*  
+📸 *Screenshot: `docker-push-acr.png`*  
 ![Docker Push](../../assets/images/labs/docker-push-acr.png)
 
 ---
@@ -58,7 +50,7 @@ This lab provides a complete walkthrough of deploying and securing containerized
 
 - Created AKS cluster with default node pool  
 - Verified resource group and cluster name  
-📸 *Screenshot: `aks-cluster-created.png` – AKS cluster deployed*  
+📸 *Screenshot: `aks-cluster-created.png`*  
 ![AKS Cluster](../../assets/images/labs/aks-cluster-created.png)
 
 ---
@@ -67,7 +59,7 @@ This lab provides a complete walkthrough of deploying and securing containerized
 
 - Assigned `AcrPull` role to AKS managed identity  
 - Verified role assignment using Azure CLI  
-📸 *Screenshot: `aks-acr-role-assignment.png` – Role assignment for secure image pull*  
+📸 *Screenshot: `aks-acr-role-assignment.png`*  
 ![Role Assignment](../../assets/images/labs/aks-acr-role-assignment.png)
 
 ---
@@ -76,7 +68,7 @@ This lab provides a complete walkthrough of deploying and securing containerized
 
 - Created Kubernetes deployment and LoadBalancer service  
 - Verified public access to Nginx container  
-📸 *Screenshot: `external-nginx-access.png` – External service exposed*  
+📸 *Screenshot: `external-nginx-access.png`*  
 ![External Access](../../assets/images/labs/external-nginx-access.png)
 
 ---
@@ -85,7 +77,7 @@ This lab provides a complete walkthrough of deploying and securing containerized
 
 - Created ClusterIP service for internal access  
 - Verified pod-to-pod communication  
-📸 *Screenshot: `internal-service-test.png` – Internal service connectivity test*  
+📸 *Screenshot: `internal-service-test.png`*  
 ![Internal Service](../../assets/images/labs/internal-service-test.png)
 
 ---
@@ -94,7 +86,7 @@ This lab provides a complete walkthrough of deploying and securing containerized
 
 - Inspected subnet and NSG rules  
 - Verified AKS node pool isolation  
-📸 *Screenshot: `aks-networking.png` – AKS network configuration*  
+📸 *Screenshot: `aks-networking.png`*  
 ![AKS Networking](../../assets/images/labs/aks-networking.png)
 
 ---
@@ -103,7 +95,7 @@ This lab provides a complete walkthrough of deploying and securing containerized
 
 - Accessed dashboard to inspect pods, services, and deployments  
 - Verified image source and resource health  
-📸 *Screenshot: `k8s-dashboard.png` – Kubernetes dashboard overview*  
+📸 *Screenshot: `k8s-dashboard.png`*  
 ![Dashboard Overview](../../assets/images/labs/k8s-dashboard.png)
 
 ---
@@ -112,27 +104,82 @@ This lab provides a complete walkthrough of deploying and securing containerized
 
 - Modified deployment YAML to increase replicas  
 - Applied changes using `kubectl apply`  
-📸 *Screenshot: `yaml-edit-apply.png` – YAML configuration update*  
+📸 *Screenshot: `yaml-edit-apply.png`*  
 ![YAML Edit](../../assets/images/labs/yaml-edit-apply.png)
 
 ---
 
-### Task 10: Final Validation and Cleanup
+### Task 10: Final Validation of AKS-ACR Integration
 
 - Verified AKS pulling image securely from ACR  
-- Deleted resources to avoid billing charges  
-📸 *Screenshot: `final-validation.png` – Final validation of AKS-ACR integration*  
+📸 *Screenshot: `final-validation.png`*  
 ![Final Validation](../../assets/images/labs/final-validation.png)
 
 ---
 
-## Key Learnings
+### Task 11: Deployment Rollout and Replica Scaling
 
-- ACR provides secure, private storage for container images  
-- AKS requires explicit role assignment to pull images from ACR  
-- Kubernetes services can be exposed externally or kept internal  
-- YAML configuration drives deployment and scaling  
-- Role-based access and network isolation are essential for cloud-native security  
-- Azure CLI and dashboard tools provide full visibility into cluster health  
+- Used `kubectl rollout status` to confirm successful update  
+- Verified replica count with `kubectl get deployment`  
+📸 *Screenshot: `deployment-rollout-status.png`*  
+![Rollout Status](../../assets/images/labs/deployment-rollout-status.png)  
+📸 *Screenshot: `replica-count-confirmation.png`*  
+![Replica Count](../../assets/images/labs/replica-count-confirmation.png)
+
+---
+
+### Task 12: Network Security and NSG Review
+
+- Inspected NSG rules for AKS subnet  
+- Verified port restrictions and subnet isolation  
+📸 *Screenshot: `nsg-rules-review.png`*  
+![NSG Rules](../../assets/images/labs/nsg-rules-review.png)  
+📸 *Screenshot: `subnet-isolation-check.png`*  
+![Subnet Isolation](../../assets/images/labs/subnet-isolation-check.png)
+
+---
+
+### Task 13: Internal Pod Access and DNS Resolution
+
+- Used `kubectl exec` and `curl` to test pod connectivity  
+- Verified DNS resolution between services  
+📸 *Screenshot: `kubectl-exec-curl-test.png`*  
+![Pod Access Test](../../assets/images/labs/kubectl-exec-curl-test.png)  
+📸 *Screenshot: `dns-resolution-test.png`*  
+![DNS Test](../../assets/images/labs/dns-resolution-test.png)
+
+---
+
+### Task 14: Resource Cleanup
+
+- Deleted AKS cluster, ACR, and resource group using Azure CLI  
+📸 *Screenshot: `resource-deletion-cli.png`*  
+![Resource Deletion](../../assets/images/labs/resource-deletion-cli.png)  
+📸 *Screenshot: `resource-group-status.png`*  
+![Resource Group Status](../../assets/images/labs/resource-group-status.png)
+
+---
+
+### Task 15: Final Dashboard Review
+
+- Revisited Kubernetes dashboard to confirm pod health  
+📸 *Screenshot: `dashboard-final-check.png`*  
+![Final Dashboard](../../assets/images/labs/dashboard-final-check.png)
+
+---
+
+## Conclusion
+
+This lab provided hands-on experience with deploying and securing containerized applications in Azure. I learned how to:
+
+- Build and store Docker images in ACR  
+- Deploy AKS clusters and configure secure image pulls  
+- Assign roles and manage access controls  
+- Deploy and test both external and internal services  
+- Scale deployments using YAML and verify rollout  
+- Review network security and isolate workloads  
+- Clean up resources responsibly to manage costs  
+
+These skills are foundational for cloud security and DevOps workflows. I now feel confident applying these practices in real-world environments and freelance projects.
 
 ---
