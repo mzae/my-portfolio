@@ -1,33 +1,18 @@
 ---
-title: "Configuring and Securing Azure Container Registry (ACR) and Azure Kubernetes Service (AKS)"
+title: "Lab Walkthrough: Configuring and Securing ACR and AKS"
 layout: lab
-permalink: /labs/full-acr-aks-walkthrough/
+permalink: /labs/configuring-securing-acr-aks/
 author: Daniel Wanjama
 date: 2025-09-17
 ---
 
 ## Introduction
 
-This lab was completed as part of the Microsoft ADC Cybersecurity Skilling Program. It focuses on configuring and securing Azure Container Registry (ACR) and Azure Kubernetes Service (AKS). The goal was to gain hands-on experience deploying containerized applications in Azure, managing access controls, and applying cloud-native security practices.
+This lab was completed as part of the Microsoft ADC Cybersecurity Skilling Program. It focuses on configuring and securing Azure Container Registry (ACR) and Azure Kubernetes Service (AKS). The walkthrough progresses from setup to validation, following a 1–100% completion path with embedded screenshots at key milestones.
 
 ---
 
-## Objectives
-
-- Create and configure Azure Container Registry  
-- Build and push Docker image to ACR  
-- Deploy AKS cluster and configure secure image pull  
-- Assign roles and permissions for AKS-ACR integration  
-- Deploy external and internal Kubernetes services  
-- Validate access, networking, and dashboard visibility  
-- Apply YAML configurations and verify updates  
-- Perform resource cleanup and reflect on key learnings  
-
----
-
-## Walkthrough
-
-### Task 1: Create Azure Container Registry
+## Progress: 1% – Create Azure Container Registry
 
 - Created private ACR instance named `acrsecuritylab`  
 - Selected Basic SKU and East Africa region  
@@ -36,7 +21,7 @@ This lab was completed as part of the Microsoft ADC Cybersecurity Skilling Progr
 
 ---
 
-### Task 2: Build and Push Docker Image to ACR
+## Progress: 10% – Build and Push Docker Image to ACR
 
 - Built Nginx image using Dockerfile  
 - Tagged image with ACR login server  
@@ -46,7 +31,7 @@ This lab was completed as part of the Microsoft ADC Cybersecurity Skilling Progr
 
 ---
 
-### Task 3: Deploy AKS Cluster
+## Progress: 20% – Deploy AKS Cluster
 
 - Created AKS cluster with default node pool  
 - Verified resource group and cluster name  
@@ -55,7 +40,7 @@ This lab was completed as part of the Microsoft ADC Cybersecurity Skilling Progr
 
 ---
 
-### Task 4: Assign Role for AKS to Pull from ACR
+## Progress: 30% – Assign Role for AKS to Pull from ACR
 
 - Assigned `AcrPull` role to AKS managed identity  
 - Verified role assignment using Azure CLI  
@@ -64,7 +49,7 @@ This lab was completed as part of the Microsoft ADC Cybersecurity Skilling Progr
 
 ---
 
-### Task 5: Deploy External Service in AKS
+## Progress: 40% – Deploy External Service in AKS
 
 - Created Kubernetes deployment and LoadBalancer service  
 - Verified public access to Nginx container  
@@ -73,7 +58,7 @@ This lab was completed as part of the Microsoft ADC Cybersecurity Skilling Progr
 
 ---
 
-### Task 6: Deploy Internal Service in AKS
+## Progress: 50% – Deploy Internal Service in AKS
 
 - Created ClusterIP service for internal access  
 - Verified pod-to-pod communication  
@@ -82,7 +67,7 @@ This lab was completed as part of the Microsoft ADC Cybersecurity Skilling Progr
 
 ---
 
-### Task 7: Review AKS Networking Configuration
+## Progress: 60% – Review AKS Networking Configuration
 
 - Inspected subnet and NSG rules  
 - Verified AKS node pool isolation  
@@ -91,7 +76,7 @@ This lab was completed as part of the Microsoft ADC Cybersecurity Skilling Progr
 
 ---
 
-### Task 8: Explore Kubernetes Dashboard
+## Progress: 70% – Explore Kubernetes Dashboard
 
 - Accessed dashboard to inspect pods, services, and deployments  
 - Verified image source and resource health  
@@ -100,7 +85,7 @@ This lab was completed as part of the Microsoft ADC Cybersecurity Skilling Progr
 
 ---
 
-### Task 9: Edit and Apply YAML Configurations
+## Progress: 80% – Edit and Apply YAML Configurations
 
 - Modified deployment YAML to increase replicas  
 - Applied changes using `kubectl apply`  
@@ -109,7 +94,7 @@ This lab was completed as part of the Microsoft ADC Cybersecurity Skilling Progr
 
 ---
 
-### Task 10: Final Validation of AKS-ACR Integration
+## Progress: 90% – Final Validation of AKS-ACR Integration
 
 - Verified AKS pulling image securely from ACR  
 📸 *Screenshot: `final-validation.png`*  
@@ -117,50 +102,23 @@ This lab was completed as part of the Microsoft ADC Cybersecurity Skilling Progr
 
 ---
 
-### Task 11: Deployment Rollout and Replica Scaling
-
-- Used `kubectl rollout status` to confirm successful update  
-- Verified replica count with `kubectl get deployment`  
-📸 *Screenshot: `deployment-rollout-status.png`*  
-![Rollout Status](../../assets/images/labs/deployment-rollout-status.png)  
-📸 *Screenshot: `replica-count-confirmation.png`*  
-![Replica Count](../../assets/images/labs/replica-count-confirmation.png)
-
----
-
-### Task 12: Network Security and NSG Review
-
-- Inspected NSG rules for AKS subnet  
-- Verified port restrictions and subnet isolation  
-📸 *Screenshot: `nsg-rules-review.png`*  
-![NSG Rules](../../assets/images/labs/nsg-rules-review.png)  
-📸 *Screenshot: `subnet-isolation-check.png`*  
-![Subnet Isolation](../../assets/images/labs/subnet-isolation-check.png)
-
----
-
-### Task 13: Internal Pod Access and DNS Resolution
-
-- Used `kubectl exec` and `curl` to test pod connectivity  
-- Verified DNS resolution between services  
-📸 *Screenshot: `kubectl-exec-curl-test.png`*  
-![Pod Access Test](../../assets/images/labs/kubectl-exec-curl-test.png)  
-📸 *Screenshot: `dns-resolution-test.png`*  
-![DNS Test](../../assets/images/labs/dns-resolution-test.png)
-
----
-
-### Task 14: Resource Cleanup
+## Progress: 95% – Resource Cleanup
 
 - Deleted AKS cluster, ACR, and resource group using Azure CLI  
 📸 *Screenshot: `resource-deletion-cli.png`*  
-![Resource Deletion](../../assets/images/labs/resource-deletion-cli.png)  
+![Resource Deletion](../../assets/images/labs/resource-deletion-cli.png)
+
+---
+
+## Progress: 98% – Confirm Resource Group Status
+
+- Verified that no lingering resources remained  
 📸 *Screenshot: `resource-group-status.png`*  
 ![Resource Group Status](../../assets/images/labs/resource-group-status.png)
 
 ---
 
-### Task 15: Final Dashboard Review
+## Progress: 100% – Final Dashboard Review
 
 - Revisited Kubernetes dashboard to confirm pod health  
 📸 *Screenshot: `dashboard-final-check.png`*  
