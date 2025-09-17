@@ -1,5 +1,5 @@
 ---
-title: "Full Lab: Configuring and Securing Azure Container Registry (ACR) and Azure Kubernetes Service (AKS)"
+title: "Configuring and Securing Azure Container Registry (ACR) and Azure Kubernetes Service (AKS)"
 layout: lab
 permalink: /labs/full-acr-aks-walkthrough/
 author: Daniel Wanjama
