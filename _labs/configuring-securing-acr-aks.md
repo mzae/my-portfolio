@@ -1,5 +1,5 @@
 ---
-title: "Lab 4: Configuring and Securing ACR and AKS"
+title: "Configuring and Securing ACR and AKS"
 layout: lab
 permalink: /labs/configuring-securing-acr-aks/
 author: Daniel Wanjama
