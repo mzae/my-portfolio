@@ -172,4 +172,3 @@ This lab demonstrates end-to-end deployment and security configuration for ACR a
 It reflects my ability to troubleshoot, automate, and document technical workflows in a cloud security context.
 
 ---
-Let me know if you'd like help generating a sidebar link, `_data/labs.yml` entry, or a landing page summary. You're ready to publish this as a top-tier portfolio piece.
