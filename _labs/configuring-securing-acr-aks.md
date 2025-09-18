@@ -17,7 +17,7 @@ This lab walkthrough documents the configuration and security of Azure Container
 I began by launching Azure Cloud Shell and reviewing the tutorial instructions for deploying AKS and ACR. This step sets the foundation for the lab.
 
 📸 *Screenshot:*  
-![Step 1 – Cloud Shell and AKS Setup](../../assets/images/labs/lab4-acr-aks/step01-cloudshell-aks-setup.png)
+![Step 1 – Cloud Shell and AKS Setup](../../assets/images/labs//step01-cloudshell-aks-setup.png)
 
 ---
 
@@ -26,7 +26,7 @@ I began by launching Azure Cloud Shell and reviewing the tutorial instructions f
 While deploying the AKS cluster, I encountered a policy error due to location restrictions. Azure Policy blocked the resource creation, which I resolved by selecting an approved region.
 
 📸 *Screenshot:*  
-![Step 2 – Deployment Policy Error](../../assets/images/labs/lab4-acr-aks/step02-policy-error.png)
+![Step 2 – Deployment Policy Error](../../assets/images/labs/step02-policy-error.png)
 
 ---
 
@@ -35,7 +35,7 @@ While deploying the AKS cluster, I encountered a policy error due to location re
 I reviewed existing resource groups to confirm the correct environment and subscription context before proceeding with cluster and registry setup.
 
 📸 *Screenshot:*  
-![Step 3 – Resource Groups Overview](../../assets/images/labs/lab4-acr-aks/step03-resource-groups-list.png)
+![Step 3 – Resource Groups Overview](../../assets/images/labs/step03-resource-groups-list.png)
 
 ---
 
@@ -44,7 +44,7 @@ I reviewed existing resource groups to confirm the correct environment and subsc
 To allow AKS to pull images from ACR securely, I assigned the `AcrPull` role to the cluster’s managed identity using the Azure Portal.
 
 📸 *Screenshot:*  
-![Step 4 – AcrPull Role Assignment](../../assets/images/labs/lab4-acr-aks/step04-role-assignment-acrpull.png)
+![Step 4 – AcrPull Role Assignment](../../assets/images/labs/step04-role-assignment-acrpull.png)
 
 ---
 
@@ -53,7 +53,7 @@ To allow AKS to pull images from ACR securely, I assigned the `AcrPull` role to 
 I created an application rule collection named `AllowGvn` to permit outbound HTTPS access to specific domains like Google and Bing.
 
 📸 *Screenshot:*  
-![Step 5 – Firewall Application Rule](../../assets/images/labs/lab4-acr-aks/step05-firewall-application-rule.png)
+![Step 5 – Firewall Application Rule](../../assets/images/labs/step05-firewall-application-rule.png)
 
 ---
 
@@ -62,7 +62,7 @@ I created an application rule collection named `AllowGvn` to permit outbound HTT
 To control internal traffic, I added a network rule collection that allows UDP traffic between defined IP ranges and ports.
 
 📸 *Screenshot:*  
-![Step 6 – Network Rule Collection](../../assets/images/labs/lab4-acr-aks/step06-network-rule-udp.png)
+![Step 6 – Network Rule Collection](../../assets/images/labs/step06-network-rule-udp.png)
 
 ---
 
@@ -71,7 +71,7 @@ To control internal traffic, I added a network rule collection that allows UDP t
 I configured custom DNS servers (Google and Cloudflare) on the `nic-firewall` network interface to ensure reliable name resolution.
 
 📸 *Screenshot:*  
-![Step 7 – Custom DNS Settings](../../assets/images/labs/lab4-acr-aks/step07-dns-settings-nic-firewall.png)
+![Step 7 – Custom DNS Settings](../../assets/images/labs/step07-dns-settings-nic-firewall.png)
 
 ---
 
@@ -80,7 +80,7 @@ I configured custom DNS servers (Google and Cloudflare) on the `nic-firewall` ne
 Using `nslookup` and `curl` from the test VM, I validated that outbound traffic was correctly routed through Azure Firewall.
 
 📸 *Screenshot:*  
-![Step 8 – Firewall Validation from VM](../../assets/images/labs/lab4-acr-aks/step08-firewall-validation-terminal.png)
+![Step 8 – Firewall Validation from VM](../../assets/images/labs/step08-firewall-validation-terminal.png)
 
 ---
 
@@ -89,7 +89,7 @@ Using `nslookup` and `curl` from the test VM, I validated that outbound traffic 
 I created a virtual network named `FirewallVNet` with three subnets: `AzureFirewallSubnet`, `Workload-SN`, and `Jump-SN`, to segment traffic and enforce security boundaries.
 
 📸 *Screenshot:*  
-![Step 9 – VNet and Subnets](../../assets/images/labs/lab4-acr-aks/step09-server-manager-vnet-subnets.png)
+![Step 9 – VNet and Subnets](../../assets/images/labs/step09-server-manager-vnet-subnets.png)
 
 ---
 
@@ -98,7 +98,7 @@ I created a virtual network named `FirewallVNet` with three subnets: `AzureFirew
 I logged into the workload VM (`rsrv-lwrk`) via Remote Desktop and confirmed connectivity and profile loading.
 
 📸 *Screenshot:*  
-![Step 10 – RDP Login to Workload VM](../../assets/images/labs/lab4-acr-aks/step10-rdp-login-profile-service.png)
+![Step 10 – RDP Login to Workload VM](../../assets/images/labs/step10-rdp-login-profile-service.png)
 
 ---
 
@@ -107,7 +107,7 @@ I logged into the workload VM (`rsrv-lwrk`) via Remote Desktop and confirmed con
 From the VM, I browsed to `http://10.0.1.4` and `http://10.0.2.4` to test firewall rules. The first succeeded, the second was blocked — confirming rule enforcement.
 
 📸 *Screenshot:*  
-![Step 11 – Public IP Validation](../../assets/images/labs/lab4-acr-aks/step11-server-manager-ip-check.png)
+![Step 11 – Public IP Validation](../../assets/images/labs/step11-server-manager-ip-check.png)
 
 ---
 
@@ -116,7 +116,7 @@ From the VM, I browsed to `http://10.0.1.4` and `http://10.0.2.4` to test firewa
 After validation, I terminated all RDP sessions and began resource cleanup to avoid unnecessary charges.
 
 📸 *Screenshot:*  
-![Step 12 – Session Termination and Cleanup](../../assets/images/labs/lab4-acr-aks/step12-rdp-session-termination.png)
+![Step 12 – Session Termination and Cleanup](../../assets/images/labs/step12-rdp-session-termination.png)
 
 ---
 
@@ -129,7 +129,7 @@ New-AzResourceGroup -Name "AZ500LabRG" -Location "East US"
 ```
 
 📸 *Screenshot:*  
-![Step 13 – Create Resource Group](../../assets/images/labs/lab4-acr-aks/step13-cloudshell-create-rg.png)
+![Step 13 – Create Resource Group](../../assets/images/labs/step13-cloudshell-create-rg.png)
 
 ---
 
@@ -142,7 +142,7 @@ Remove-AzResourceGroup -Name AzureFirewallRG -Force -AsJob
 ```
 
 📸 *Screenshot:*  
-![Step 14 – Remove Resource Group](../../assets/images/labs/lab4-acr-aks/step14-cloudshell-remove-rg.png)
+![Step 14 – Remove Resource Group](../../assets/images/labs/step14-cloudshell-remove-rg.png)
 
 ---
 
@@ -155,7 +155,7 @@ Get-AzFirewall -ResourceGroupName AzureResourceGroup
 ```
 
 📸 *Screenshot:*  
-![Step 15 – Firewall Status Verified](../../assets/images/labs/lab4-acr-aks/step15-get-firewall-status.png)
+![Step 15 – Firewall Status Verified](../../assets/images/labs/step15-get-firewall-status.png)
 
 ---
 
