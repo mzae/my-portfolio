@@ -55,7 +55,7 @@ ICT Systems & Network Support Specialist with over 8 years of experience in syst
 - Administered RDS databases with backups and access controls.
 
 **Other Roles**  
-- ICT County Officer, National Census (Supervisor, Westlands & Kilimani) – 2019
+- ICT County Officer, National Census (Supervisor, Westlands, Kileleshwa & Kilimani) – 2019
 - Help-desk Support, Rural Electrification Authority (REA) – 2018
 - Help-desk Support, National Bank of Kenya – 2017
 - Data Clerk & Audio-to-Text Transcriber, SBO Research – 2008–2012
