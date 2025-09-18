@@ -1,143 +1,175 @@
 ---
-title: "Lab Walkthrough: Configuring and Securing ACR and AKS"
+title: "Lab 4: Configuring and Securing ACR and AKS"
 layout: lab
 permalink: /labs/configuring-securing-acr-aks/
 author: Daniel Wanjama
-date: 2025-09-17
+date: 2025-09-18
 ---
 
 ## Introduction
 
-This lab was completed as part of the Microsoft ADC Cybersecurity Skilling Program. It focuses on configuring and securing Azure Container Registry (ACR) and Azure Kubernetes Service (AKS). The walkthrough progresses from setup to validation, following a 1–100% completion path with embedded screenshots at key milestones.
+This lab walkthrough documents the configuration and security of Azure Container Registry (ACR) and Azure Kubernetes Service (AKS), including role assignments, firewall rules, DNS settings, and validation steps. It demonstrates real-world cloud security practices using Azure CLI, PowerShell, and the Azure Portal.
 
 ---
 
-## Progress: 1% – Create Azure Container Registry
+## Step 1: Launch Cloud Shell and Prepare for AKS Deployment
 
-- Created private ACR instance named `acrsecuritylab`  
-- Selected Basic SKU and East Africa region  
-📸 *Screenshot: `acr-creation.png`*  
-![ACR Creation](../../assets/images/labs/acr-creation.png)
+I began by launching Azure Cloud Shell and reviewing the tutorial instructions for deploying AKS and ACR. This step sets the foundation for the lab.
 
----
-
-## Progress: 10% – Build and Push Docker Image to ACR
-
-- Built Nginx image using Dockerfile  
-- Tagged image with ACR login server  
-- Pushed image to ACR using Docker CLI  
-📸 *Screenshot: `docker-push-acr.png`*  
-![Docker Push](../../assets/images/labs/docker-push-acr.png)
+📸 *Screenshot:*  
+![Step 1 – Cloud Shell and AKS Setup](../../assets/images/labs/lab4-acr-aks/step01-cloudshell-aks-setup.png)
 
 ---
 
-## Progress: 20% – Deploy AKS Cluster
+## Step 2: Troubleshoot Deployment Policy Restriction
 
-- Created AKS cluster with default node pool  
-- Verified resource group and cluster name  
-📸 *Screenshot: `aks-cluster-created.png`*  
-![AKS Cluster](../../assets/images/labs/aks-cluster-created.png)
+While deploying the AKS cluster, I encountered a policy error due to location restrictions. Azure Policy blocked the resource creation, which I resolved by selecting an approved region.
 
----
-
-## Progress: 30% – Assign Role for AKS to Pull from ACR
-
-- Assigned `AcrPull` role to AKS managed identity  
-- Verified role assignment using Azure CLI  
-📸 *Screenshot: `aks-acr-role-assignment.png`*  
-![Role Assignment](../../assets/images/labs/aks-acr-role-assignment.png)
+📸 *Screenshot:*  
+![Step 2 – Deployment Policy Error](../../assets/images/labs/lab4-acr-aks/step02-policy-error.png)
 
 ---
 
-## Progress: 40% – Deploy External Service in AKS
+## Step 3: View Resource Groups in Azure Portal
 
-- Created Kubernetes deployment and LoadBalancer service  
-- Verified public access to Nginx container  
-📸 *Screenshot: `external-nginx-access.png`*  
-![External Access](../../assets/images/labs/external-nginx-access.png)
+I reviewed existing resource groups to confirm the correct environment and subscription context before proceeding with cluster and registry setup.
 
----
-
-## Progress: 50% – Deploy Internal Service in AKS
-
-- Created ClusterIP service for internal access  
-- Verified pod-to-pod communication  
-📸 *Screenshot: `internal-service-test.png`*  
-![Internal Service](../../assets/images/labs/internal-service-test.png)
+📸 *Screenshot:*  
+![Step 3 – Resource Groups Overview](../../assets/images/labs/lab4-acr-aks/step03-resource-groups-list.png)
 
 ---
 
-## Progress: 60% – Review AKS Networking Configuration
+## Step 4: Assign AcrPull Role to AKS Identity
 
-- Inspected subnet and NSG rules  
-- Verified AKS node pool isolation  
-📸 *Screenshot: `aks-networking.png`*  
-![AKS Networking](../../assets/images/labs/aks-networking.png)
+To allow AKS to pull images from ACR securely, I assigned the `AcrPull` role to the cluster’s managed identity using the Azure Portal.
 
----
-
-## Progress: 70% – Explore Kubernetes Dashboard
-
-- Accessed dashboard to inspect pods, services, and deployments  
-- Verified image source and resource health  
-📸 *Screenshot: `k8s-dashboard.png`*  
-![Dashboard Overview](../../assets/images/labs/k8s-dashboard.png)
+📸 *Screenshot:*  
+![Step 4 – AcrPull Role Assignment](../../assets/images/labs/lab4-acr-aks/step04-role-assignment-acrpull.png)
 
 ---
 
-## Progress: 80% – Edit and Apply YAML Configurations
+## Step 5: Configure Azure Firewall Application Rule
 
-- Modified deployment YAML to increase replicas  
-- Applied changes using `kubectl apply`  
-📸 *Screenshot: `yaml-edit-apply.png`*  
-![YAML Edit](../../assets/images/labs/yaml-edit-apply.png)
+I created an application rule collection named `AllowGvn` to permit outbound HTTPS access to specific domains like Google and Bing.
 
----
-
-## Progress: 90% – Final Validation of AKS-ACR Integration
-
-- Verified AKS pulling image securely from ACR  
-📸 *Screenshot: `final-validation.png`*  
-![Final Validation](../../assets/images/labs/final-validation.png)
+📸 *Screenshot:*  
+![Step 5 – Firewall Application Rule](../../assets/images/labs/lab4-acr-aks/step05-firewall-application-rule.png)
 
 ---
 
-## Progress: 95% – Resource Cleanup
+## Step 6: Add Network Rule Collection
 
-- Deleted AKS cluster, ACR, and resource group using Azure CLI  
-📸 *Screenshot: `resource-deletion-cli.png`*  
-![Resource Deletion](../../assets/images/labs/resource-deletion-cli.png)
+To control internal traffic, I added a network rule collection that allows UDP traffic between defined IP ranges and ports.
 
----
-
-## Progress: 98% – Confirm Resource Group Status
-
-- Verified that no lingering resources remained  
-📸 *Screenshot: `resource-group-status.png`*  
-![Resource Group Status](../../assets/images/labs/resource-group-status.png)
+📸 *Screenshot:*  
+![Step 6 – Network Rule Collection](../../assets/images/labs/lab4-acr-aks/step06-network-rule-udp.png)
 
 ---
 
-## Progress: 100% – Final Dashboard Review
+## Step 7: Configure Custom DNS Servers
 
-- Revisited Kubernetes dashboard to confirm pod health  
-📸 *Screenshot: `dashboard-final-check.png`*  
-![Final Dashboard](../../assets/images/labs/dashboard-final-check.png)
+I configured custom DNS servers (Google and Cloudflare) on the `nic-firewall` network interface to ensure reliable name resolution.
+
+📸 *Screenshot:*  
+![Step 7 – Custom DNS Settings](../../assets/images/labs/lab4-acr-aks/step07-dns-settings-nic-firewall.png)
+
+---
+
+## Step 8: Validate Firewall Rules from Test VM
+
+Using `nslookup` and `curl` from the test VM, I validated that outbound traffic was correctly routed through Azure Firewall.
+
+📸 *Screenshot:*  
+![Step 8 – Firewall Validation from VM](../../assets/images/labs/lab4-acr-aks/step08-firewall-validation-terminal.png)
+
+---
+
+## Step 9: Create Virtual Network and Subnets
+
+I created a virtual network named `FirewallVNet` with three subnets: `AzureFirewallSubnet`, `Workload-SN`, and `Jump-SN`, to segment traffic and enforce security boundaries.
+
+📸 *Screenshot:*  
+![Step 9 – VNet and Subnets](../../assets/images/labs/lab4-acr-aks/step09-server-manager-vnet-subnets.png)
+
+---
+
+## Step 10: Test Access to Workload VM
+
+I logged into the workload VM (`rsrv-lwrk`) via Remote Desktop and confirmed connectivity and profile loading.
+
+📸 *Screenshot:*  
+![Step 10 – RDP Login to Workload VM](../../assets/images/labs/lab4-acr-aks/step10-rdp-login-profile-service.png)
+
+---
+
+## Step 11: Confirm Public IP Routing via Browser
+
+From the VM, I browsed to `http://10.0.1.4` and `http://10.0.2.4` to test firewall rules. The first succeeded, the second was blocked — confirming rule enforcement.
+
+📸 *Screenshot:*  
+![Step 11 – Public IP Validation](../../assets/images/labs/lab4-acr-aks/step11-server-manager-ip-check.png)
+
+---
+
+## Step 12: Terminate Remote Desktop Sessions and Begin Cleanup
+
+After validation, I terminated all RDP sessions and began resource cleanup to avoid unnecessary charges.
+
+📸 *Screenshot:*  
+![Step 12 – Session Termination and Cleanup](../../assets/images/labs/lab4-acr-aks/step12-rdp-session-termination.png)
+
+---
+
+## Step 13: Create Resource Group via PowerShell
+
+Using Azure Cloud Shell, I created a new resource group named `AZ500LabRG`.
+
+```powershell
+New-AzResourceGroup -Name "AZ500LabRG" -Location "East US"
+```
+
+📸 *Screenshot:*  
+![Step 13 – Create Resource Group](../../assets/images/labs/lab4-acr-aks/step13-cloudshell-create-rg.png)
+
+---
+
+## Step 14: Remove AzureFirewallRG via PowerShell
+
+I removed the `AzureFirewallRG` resource group using PowerShell to clean up lab resources.
+
+```powershell
+Remove-AzResourceGroup -Name AzureFirewallRG -Force -AsJob
+```
+
+📸 *Screenshot:*  
+![Step 14 – Remove Resource Group](../../assets/images/labs/lab4-acr-aks/step14-cloudshell-remove-rg.png)
+
+---
+
+## Step 15: Verify Azure Firewall Deployment
+
+Finally, I verified the Azure Firewall deployment status using PowerShell.
+
+```powershell
+Get-AzFirewall -ResourceGroupName AzureResourceGroup
+```
+
+📸 *Screenshot:*  
+![Step 15 – Firewall Status Verified](../../assets/images/labs/lab4-acr-aks/step15-get-firewall-status.png)
 
 ---
 
 ## Conclusion
 
-This lab provided hands-on experience with deploying and securing containerized applications in Azure. I learned how to:
+This lab demonstrates end-to-end deployment and security configuration for ACR and AKS, including:
 
-- Build and store Docker images in ACR  
-- Deploy AKS clusters and configure secure image pulls  
-- Assign roles and manage access controls  
-- Deploy and test both external and internal services  
-- Scale deployments using YAML and verify rollout  
-- Review network security and isolate workloads  
-- Clean up resources responsibly to manage costs  
+- Role-based access control  
+- DNS and firewall rule enforcement  
+- Network segmentation  
+- Real-world validation from VMs  
+- Resource cleanup using PowerShell
 
-These skills are foundational for cloud security and DevOps workflows. I now feel confident applying these practices in real-world environments and freelance projects.
+It reflects my ability to troubleshoot, automate, and document technical workflows in a cloud security context.
 
 ---
+Let me know if you'd like help generating a sidebar link, `_data/labs.yml` entry, or a landing page summary. You're ready to publish this as a top-tier portfolio piece.
