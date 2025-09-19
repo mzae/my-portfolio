@@ -16,7 +16,7 @@ author_profile: true
 ---
 
 ## 🧾 Professional Summary
-ICT Systems & Network Support Specialist with over 8 years of experience in systems administration, networking, and IT operations. Upskilled in AWS, Azure, and Oracle Cloud, excelling in secure, scalable solutions and Zero Trust models. Skilled at aligning technology with business needs, enhancing reliability, and driving secure digital transformation.
+IT Support turned Cloud Specialist with over 8 years in help desk support and IT operations. Skilled in Azure Cloud Security, Oracle Cloud, and AWS infrastructure, with proven ability to design and implement secure, scalable, and resilient solutions. Developed a series of hands-on Azure labs demonstrating applied expertise in cloud governance and infrastructure protection.
 
 ---
 
