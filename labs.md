@@ -5,7 +5,7 @@ permalink: /labs/
 author_profile: true
 ---
 
-Welcome to my OCI labs. Each lab explores a specific concept or service in Oracle Cloud Infrastructure.
+Welcome to my Azure labs. Each lab explores a specific lab in Azure Cloud Security.
 
 {% for lab in site.labs %}
 - [{{ lab.title }}]({{ lab.url | relative_url }})
