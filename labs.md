@@ -5,7 +5,7 @@ permalink: /labs/
 author_profile: true
 ---
 
-Welcome to my Azure labs. Each lab explores a specific lab in Azure Cloud Security.
+Welcome to my Azure cloud security labs. 
 
 {% for lab in site.labs %}
 - [{{ lab.title }}]({{ lab.url | relative_url }})
