@@ -6,85 +6,91 @@ author_profile: true
 ---
 
 ## 📞 Contact Information
-- **Name:** Daniel Wanjama
-- **Location:** Nairobi, Kenya
-- **Email:** wanjamadaniel69@gmail.com
-- **Phone:** +254736263884
-- **LinkedIn:** [linkedin.com/in/dennis1jama](https://linkedin.com/in/dennis1jama)
-- **Portfolio:** [mzae.github.io/my-portfolio](https://mzae.github.io/my-portfolio)
+- **Name:** Daniel Wanjama  
+- **Location:** Nairobi, Kenya  
+- **Email:** wanjamadaniel69@gmail.com  
+- **Phone:** +254 736 263 884  
+- **LinkedIn:** [linkedin.com/in/dennis1jama](https://linkedin.com/in/dennis1jama)  
+- **Portfolio:** [mzae.github.io/my-portfolio](https://mzae.github.io/my-portfolio)  
 
 ---
 
 ## 🧾 Professional Summary
-IT Support turned Cloud Specialist with over 8 years in help desk support and IT operations. Skilled in Azure Cloud Security, Oracle Cloud, and AWS infrastructure, with proven ability to design and implement secure, scalable, and resilient solutions. Developed a series of hands-on Azure labs demonstrating applied expertise in cloud governance and infrastructure protection.
+Cloud Security Engineer and ICT Specialist with over 8 years of experience in IT systems and support across government, enterprise, and NGO environments. Proven expertise in designing and securing cloud infrastructure on AWS, Azure, and Oracle Cloud, with hands-on skills in identity management, Zero Trust architecture, and automated monitoring. Track record of reducing downtime, improving system resilience, and optimizing cloud costs. Recognized for proactive problem-solving and strong client support.
 
 ---
 
 ## 🛠️ Technical Skills
-- **Cloud Infrastructure:** Design secure AWS, Azure, Oracle Cloud environments
-- **Network Security:** Configure firewalls, IDS/IPS, Zero Trust models
-- **Systems Administration:** Manage Windows/Linux servers with security
-- **Network Monitoring:** Use Wireshark for performance diagnostics
-- **Identity Management:** Implement Azure AD, RBAC, MFA policies
+- **Cloud Security & Identity Management:** Skilled in implementing Azure AD, RBAC, MFA, and Zero Trust models.  
+- **Multi-Cloud Infrastructure Management:** Experienced in deploying and managing secure environments on AWS, Azure, and Oracle Cloud.  
+- **Network Administration & Security:** Proficient in configuring LAN/WAN, VPNs, firewalls, and monitoring traffic with Wireshark.  
+- **Systems Administration:** Administering and hardening Windows and Linux servers with patch management, backup, and disaster recovery.  
+- **Cloud Automation & Optimization:** Using Auto Scaling, Load Balancing, and policies to improve efficiency and reduce costs.  
+- **Soft Skills:** Strategic Leadership, Communication, Adaptability, and Problem-Solving.  
+
+---
+
+## 🧩 Soft Skills
+- **Team Collaboration & Leadership:** Worked effectively with cross-functional teams and clients, ensuring ICT and cloud solutions aligned with organizational needs.  
+- **Independent Problem-Solving:** Delivered IT support and cloud projects autonomously, from troubleshooting to security hardening.  
+- **Attention to Detail:** Ensured accuracy in system configurations, security policies, and documentation, reducing compliance risks.  
+- **Clear Communication:** Explained complex technical concepts in simple terms to stakeholders and end-users.  
 
 ---
 
 ## 💼 Professional Experience
 **ICT Systems & Network Support**  
-*Touchdown Systems | July 2016 – Present*  
-- Provided IT support for clients like Radar Security Ltd and Save the Children, ensuring seamless operations.
-- Managed systems and networks for 50+ users, ensuring reliable connectivity.
-- Configured LAN, WAN, VPN with Cisco routers and firewalls for security.
-- Administered Windows/Linux servers with updates and security hardening.
-- Monitored performance with Wireshark, reducing downtime proactively.
+*Touchdown Systems | July 2016 – Present – Freelance*  
+- Assisted end-users with hardware, software, and connectivity issues, resolving 90% of tickets within SLA.  
+- Performed preventive maintenance on workstations and servers to ensure security compliance.  
+- Delivered technical support both on-premises and remotely via TeamViewer, RDP, and SSH.  
+- Configured LAN/WAN, VPNs, and Wi-Fi access points, ensuring secure and reliable connectivity.  
+- Installed and updated enterprise applications, drivers, and operating systems.  
+- Applied OS and application updates to protect against vulnerabilities.  
+- Managed accounts, permissions, and groups in Active Directory / Azure AD.  
+- Supported backup operations and restored data during incidents.  
+- Implemented antivirus, endpoint security, and access controls.  
+- Maintained IT knowledge base and support logs to streamline ticket resolution.  
 
 **Azure Security Engineer Trainee**  
 *CyberShujaa | Jan 2025 – Jun 2025*  
-- Configured Azure AD, RBAC, MFA for identity and access security.
-- Secured Virtual Networks with NSGs and Azure Firewall for traffic control.
-- Integrated Microsoft Sentinel for security monitoring and threat response.
-- Deployed Azure Policies and JIT VM access to reduce risks.
-- Designed secure Azure environment with VNets and logging.
+- Configured Azure AD, RBAC, and MFA for identity and access security.  
+- Secured Virtual Networks with NSGs and Azure Firewall.  
+- Integrated Microsoft Sentinel for monitoring and incident response.  
+- Deployed Azure Policies and JIT VM access to reduce risks.  
+- Designed secure Azure environments with VNets and logging.  
 
 **AWS Cloud Practitioner Trainee**  
-*Amazon Web Services | Jan 2024 – Apr 2024*  
-- Deployed AWS infrastructure with VPCs and security groups.
-- Implemented Load Balancing and Auto Scaling for efficiency.
-- Configured EC2 with SSH, encryption, and IAM roles.
-- Managed S3 buckets with versioning and encryption.
-- Administered RDS databases with backups and access controls.
+*AWS | Jan 2024 – Apr 2024*  
+- Deployed AWS infrastructure with VPCs and security groups.  
+- Implemented Load Balancing and Auto Scaling for efficiency.  
+- Configured EC2 with SSH, encryption, and IAM roles.  
+- Managed S3 buckets with versioning and encryption.  
+- Administered RDS databases with backups and access controls.  
 
 **Other Roles**  
-- ICT County Officer, National Census (Supervisor, Westlands, Kileleshwa & Kilimani) – 2019
-- Help-desk Support, Rural Electrification Authority (REA) – 2018
-- Help-desk Support, National Bank of Kenya – 2017
-- Data Clerk & Audio-to-Text Transcriber, SBO Research – 2008–2012
+- ICT County Officer, National Census (2019) – Supervisor for Westlands, Kileleshwa, Kilimani.  
+- Help Desk Support, Rural Electrification Authority (2018).  
+- Help Desk Support, National Bank of Kenya (2017).  
+- Data Clerk & Audio-to-Text Transcriber, SBO Research (2008 – 2012).  
 
 ---
 
 ## 🎓 Education & Certifications
-- **BSc. Information Technology**, JKUAT, 2016
-- Azure Cloud Security Specialist, CyberShujaa Program, 2025
-- AWS Certified Cloud Practitioner, Amazon Web Services, 2024
-- Oracle Cloud Certified Foundations Associate, Oracle, 2025
-- Cisco Certified Network Associate (CCNA), Cisco, 2016
-
----
-
-## 🧩 Soft Skills
-- Strategic Leadership: Guided teams to align ICT with business goals
-- Clear Communication: Explained technical concepts to stakeholders
-- Rapid Adaptability: Mastered cloud technologies for project demands
-- Proactive Problem-Solving: Resolved network issues under tight deadlines
+- **BSc. Information Technology**, JKUAT, 2016  
+- Azure Cloud Security Specialist, CyberShujaa Program, 2025  
+- Oracle Cloud Certified Foundations Associate, 2025  
+- AWS Certified Cloud Practitioner, 2024  
+- Cisco Certified Network Associate (CCNA), 2016  
 
 ---
 
 ## 💡 Achievements
-- Significantly reduced network downtime at Touchdown Systems using Wireshark
-- Greatly enhanced system resilience for Radar Security’s network
-- Achieved full Azure security compliance with AD and MFA
-- Optimized AWS costs with Load Balancing and Auto Scaling
-- Substantially improved incident response using Microsoft Sentinel
+- Reduced network downtime at Touchdown Systems using Wireshark  
+- Enhanced system resilience for Radar Security’s network  
+- Achieved full Azure security compliance with AD and MFA  
+- Optimized AWS costs with Load Balancing and Auto Scaling  
+- Improved incident response using Microsoft Sentinel  
 
 ---
 
