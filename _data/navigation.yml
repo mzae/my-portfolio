@@ -6,4 +6,4 @@ main:
   - title: "Labs"
     url: "{{ '/labs/' | relative_url }}"
   - title: "Security-Analyst-Portfolio"
-    url: "{{ '/portfolio/security-analyst/' | relative_url }}"
+    url: "{{ 'my-portfolio/portfolio/security-analyst/' | relative_url }}"
