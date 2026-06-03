@@ -28,10 +28,16 @@ author:
   linkedin: "dennis1wanjama"
 
 # Collections
+#collections:
+ # labs:
+  #  output: true
+   # permalink: /labs/:title/
+
 collections:
   labs:
     output: true
-    permalink: /labs/:title/
+    permalink: /labs/:name/
+
 
 # Defaults for labs
 defaults:
