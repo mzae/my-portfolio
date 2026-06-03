@@ -45,7 +45,7 @@ defaults:
       path: ""
       type: labs
     values:
-      layout: single
+      layout: lab
       author_profile: true
 
 # Navigation data
