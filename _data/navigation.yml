@@ -5,5 +5,5 @@ main:
     url: "{{ '/resume/' | relative_url }}"
   - title: "Labs"
     url: "{{ '/labs/' | relative_url }}"
-  - title: "Security-Analyst-Portfolio"
-    url: "{{ 'my-portfolio/portfolio/security-analyst/' | relative_url }}"
+  - title: "Security Analyst Portfolio"
+    url: "{{ '/portfolio/security-analyst/' | relative_url }}"
