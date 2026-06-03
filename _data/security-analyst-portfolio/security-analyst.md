@@ -12,11 +12,11 @@ This section highlights my SOC Analyst labs and achievements. Each lab demonstra
 
 ## 🔐 SOC Analyst Labs
 
-#- [Incident Response Playbook](/my-portfolio/labs/incident-response-playbook/)
-#- [SIEM Integration with Sentinel](/my-portfolio/labs/sentinel-integration/)
-#- [Threat Hunting with KQL](/my-portfolio/labs/threat-hunting/)
-#- [Cloud Security Controls](/my-portfolio/labs/cloud-security-controls/)
-#- [Incident Response Case Study](/my-portfolio/labs/incident-response-case-study/)
+##- [Incident Response Playbook](/my-portfolio/labs/incident-response-playbook/)
+##- [SIEM Integration with Sentinel](/my-portfolio/labs/sentinel-integration/)
+##- [Threat Hunting with KQL](/my-portfolio/labs/threat-hunting/)
+##- [Cloud Security Controls](/my-portfolio/labs/cloud-security-controls/)
+##- [Incident Response Case Study](/my-portfolio/labs/incident-response-case-study/)
 
 
 ## 🔐 SOC Analyst Labs
