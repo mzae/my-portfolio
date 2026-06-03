@@ -5,6 +5,6 @@ main:
     url: /resume/
   - title: "Labs"
     url: /labs/
-  - title: Portfolio
-
-  url: /portfolio/security-analyst/
+  
+  - title: "Security-Analyst-Portfolio"
+  - url: /portfolio/security-analyst/
