@@ -1,11 +1,9 @@
 main:
   - title: "Home"
-    url: /my-portfolio/
+    url: "{{ '/' | relative_url }}"
   - title: "Resume"
-    url: /my-portfolio/resume/
+    url: "{{ '/resume/' | relative_url }}"
   - title: "Labs"
-    url: /my-portfolio/labs/
+    url: "{{ '/labs/' | relative_url }}"
   - title: "Security-Analyst-Portfolio"
-    url: /my-portfolio/portfolio/security-analyst/
-
-
+    url: "{{ '/portfolio/security-analyst/' | relative_url }}"
