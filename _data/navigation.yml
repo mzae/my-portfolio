@@ -1,11 +1,11 @@
 main:
   - title: "Home"
-    url: /
+    url: /my-portfolio/
   - title: "Resume"
-    url: /resume/
+    url: /my-portfolio/resume/
   - title: "Labs"
-    url: /labs/
-  
+    url: /my-portfolio/labs/
   - title: "Security-Analyst-Portfolio"
-    url: 'my-portfolio/portfolio/security-analyst/'
+    url: /my-portfolio/portfolio/security-analyst/
+
 
