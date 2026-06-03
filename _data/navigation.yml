@@ -1,0 +1,11 @@
+main:
+  - title: "Home"
+    url: /
+  - title: "Resume"
+    url: /resume/
+  - title: "Labs"
+    url: /labs/
+  
+  - title: "Security-Analyst-Portfolio"
+    url: '/portfolio/security-analyst/'
+

@@ -1,0 +1,54 @@
+            Source: /mnt/c/Users/comps/my-portfolio/assets/images
+       Destination: /mnt/c/Users/comps/my-portfolio/assets/images/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+                    done in 0.05 seconds.
+ Auto-regeneration: enabled for '/mnt/c/Users/comps/my-portfolio/assets/images'
+  Logging at level: debug
+    Jekyll Version: 4.3.4
+  Logging at level: debug
+    Jekyll Version: 4.3.4
+            Source: /mnt/c/Users/comps/my-portfolio/assets/images
+       Destination: /mnt/c/Users/comps/my-portfolio/assets/images/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+       EntryFilter: excluded /.jekyll-cache
+                    done in 0.063 seconds.
+         Requiring: jekyll-watch
+           Watcher: Ignoring (?-mix:^_site\/)
+           Watcher: Ignoring (?-mix:^\.jekyll\-cache\/)
+ Auto-regeneration: enabled for '/mnt/c/Users/comps/my-portfolio/assets/images'
+[2025-08-18 14:54:18] INFO  WEBrick 1.9.1
+[2025-08-18 14:54:18] INFO  ruby 3.3.8 (2025-04-09) [x86_64-linux-gnu]
+  Logging at level: debug
+    Jekyll Version: 4.3.4
+  Logging at level: debug
+    Jekyll Version: 4.3.4
+            Source: /mnt/c/Users/comps/my-portfolio/assets/images
+       Destination: /mnt/c/Users/comps/my-portfolio/assets/images/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+       EntryFilter: excluded /.jekyll-cache
+                    done in 0.055 seconds.
+         Requiring: jekyll-watch
+           Watcher: Ignoring (?-mix:^_site\/)
+           Watcher: Ignoring (?-mix:^\.jekyll\-cache\/)
+ Auto-regeneration: enabled for '/mnt/c/Users/comps/my-portfolio/assets/images'
+[2025-08-18 14:54:55] INFO  WEBrick 1.9.1
+[2025-08-18 14:54:55] INFO  ruby 3.3.8 (2025-04-09) [x86_64-linux-gnu]
+  Logging at level: debug
+    Jekyll Version: 4.3.4
+  Logging at level: debug
+    Jekyll Version: 4.3.4
+            Source: /mnt/c/Users/comps/my-portfolio/assets/images
+       Destination: /mnt/c/Users/comps/my-portfolio/assets/images/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+       EntryFilter: excluded /.jekyll-cache
+                    done in 0.056 seconds.
+         Requiring: jekyll-watch
+           Watcher: Ignoring (?-mix:^_site\/)
+           Watcher: Ignoring (?-mix:^\.jekyll\-cache\/)
+ Auto-regeneration: enabled for '/mnt/c/Users/comps/my-portfolio/assets/images'
+[2025-08-18 14:55:51] INFO  WEBrick 1.9.1
+[2025-08-18 14:55:51] INFO  ruby 3.3.8 (2025-04-09) [x86_64-linux-gnu]

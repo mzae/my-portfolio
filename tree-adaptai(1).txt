@@ -1,0 +1,164 @@
+[       4096]  .
+├── [       4096]  assets
+│   ├── [       4096]  css
+│   │   ├── [         32]  division
+│   │   ├── [         64]  main.scss
+│   │   ├── [       4096]  _site
+│   │   │   ├── [         32]  division
+│   │   │   └── [         64]  main.scss
+│   │   ├── [        218]  style.css
+│   │   └── [         60]  _variables.scss
+│   └── [       4096]  images
+│       ├── [       2539]  error.txt
+│       ├── [          0]  .gitkeep
+│       ├── [       4096]  labs
+│       │   ├── [    1081810]  01-custom-deployment.png
+│       │   ├── [    1040875]  02-load-template.png
+│       │   ├── [     492953]  04-create-keyvault.png
+│       │   ├── [     556217]  06-access-policy.png
+│       │   ├── [     775230]  09-add-secret.png
+│       │   ├── [     905671]  11-app-registration.png
+│       │   ├── [     670713]  14-connect-ssms.png
+│       │   ├── [     983190]  16-encrypt-columns.png
+│       │   ├── [     730352]  17-master-key-config.png
+│       │   ├── [     583114]  18-encryption-summary.png
+│       │   ├── [     531357]  acr-creation.png
+│       │   ├── [     700366]  aks-cluster-created.png
+│       │   ├── [     210672]  asg-setup.png
+│       │   ├── [     388871]  audit-log-enabled.png
+│       │   ├── [     549943]  docker-push-acr.png
+│       │   ├── [     380282]  entra-signin.png
+│       │   ├── [     343045]  entra-user-settings.png
+│       │   ├── [     511297]  external-nginx-access.png
+│       │   ├── [     391175]  final-validation.png
+│       │   ├── [     203998]  http-access.png
+│       │   ├── [     205146]  iis-installed.png
+│       │   ├── [     399645]  internal-service-test.png
+│       │   ├── [     492454]  k8s-dashboard.png
+│       │   ├── [     568954]  kubectl-exec-curl-test.png
+│       │   ├── [     317460]  lab1_admin_login.png
+│       │   ├── [     224517]  lab1-nsg-task2-add-rdp-rule.png
+│       │   ├── [     200703]  lab1-nsg-task2-create-nsg.png
+│       │   ├── [     508574]  lab1-nsg-task3-rdp-connectivity-test.png
+│       │   ├── [     535102]  lab1-nsg-task4-block-outbound-rule.png
+│       │   ├── [     622034]  lab2-defender-enable-plans.png
+│       │   ├── [     567957]  lab2-defender-overview.png
+│       │   ├── [     549534]  lab2-defender-security-recommendations.png
+│       │   ├── [     210291]  lab3-sentinel-task1-create-instance.png
+│       │   ├── [     214063]  lab3-sentinel-task2-role-assignment.png
+│       │   ├── [     578538]  lab3-sentinel-task3-connect-content-hub.png
+│       │   ├── [     231336]  lab4-defender-apps-cloud-discovery.png
+│       │   ├── [     177218]  mgmt-nsg-rules.png
+│       │   ├── [     187182]  mgmt-vm.png
+│       │   ├── [     174871]  nsg-subnet-link.png
+│       │   ├── [     181857]  rdp-denied.png
+│       │   ├── [     181599]  resource-group.png
+│       │   ├── [     644227]  step01-cloudshell-aks-setup.png
+│       │   ├── [     544859]  step01-resource-group.png
+│       │   ├── [     412809]  step01-virtual-network.png
+│       │   ├── [     519571]  step02-asg-management.png
+│       │   ├── [     597221]  step02-asg-web.png
+│       │   ├── [     531357]  step02-policy-error.png
+│       │   ├── [     519571]  step03-management-vm.png
+│       │   ├── [     515843]  step03-resource-groups-list.png
+│       │   ├── [     615620]  step03-web-vm.png
+│       │   ├── [     604778]  step04-role-assignment-acrpull.png
+│       │   ├── [     441189]  step05-firewall-application-rule.png
+│       │   ├── [     546964]  step06-iis-access.png
+│       │   ├── [     418624]  step06-network-rule-udp.png
+│       │   ├── [     566808]  step06-rdp-access.png
+│       │   ├── [     463848]  step07-dns-settings-nic-firewall.png
+│       │   ├── [     716782]  step07-network-watcher.png
+│       │   ├── [     616416]  step10-rdp-login-profile-service.png
+│       │   ├── [     529096]  step11-server-manager-ip-check.png
+│       │   ├── [     548193]  step12-rdp-session-termination.png
+│       │   ├── [     397589]  step13-cloudshell-create-rg.png
+│       │   ├── [     634148]  step14-cloudshell-remove-rg.png
+│       │   ├── [     568954]  step15-get-firewall-status.png
+│       │   ├── [     511634]  task1-arm-template-deployment.png
+│       │   ├── [     377089]  task2-firewall-deployment.png
+│       │   ├── [     433461]  task3-route-table-association.png
+│       │   ├── [     418624]  task5-network-rules.png
+│       │   ├── [     463848]  task6-dns-settings.png
+│       │   ├── [     529096]  task7-allowed-traffic-test.png
+│       │   ├── [     568954]  task7-blocked-traffic-test.png
+│       │   ├── [     181327]  vnet-subnets.png
+│       │   ├── [     149027]  web-nsg-rules.png
+│       │   ├── [     213653]  web-vm.png
+│       │   └── [     517788]  yaml-edit-apply.png
+│       ├── [      37017]  profile.jpg
+│       └── [       4096]  _site
+│           ├── [       2539]  error.txt
+│           └── [      37017]  profile.jpg
+├── [       1443]  _config.yml
+├── [       4096]  _data
+│   ├── [        191]  navigation.yml
+│   └── [       4096]  security-analyst-portfolio
+│       └── [          1]  security-analyst.md
+├── [       7337]  error.txt
+├── [        414]  Gemfile
+├── [       3416]  Gemfile.lock
+├── [       4096]  .github
+│   └── [       4096]  workflows
+│       ├── [        746]  error.txt
+│       └── [        609]  jekyll.yml
+├── [         77]  .gitignore
+├── [        756]  index.md
+├── [       4096]  _labs
+│   ├── [       2820]  Azure Firewall Configuration and Testing.md
+│   ├── [       5679]  Capabilities of Microsoft Security Solutions.md
+│   ├── [       5690]  configuring-securing-acr-aks.md
+│   ├── [        487]  incident-response-playbook.md
+│   ├── [       4491]  Microsoft Identity and Access Management Solutions.md
+│   ├── [       4051]  network-security-groups-and-application-security-groups.md
+│   ├── [       5382]  role-based-access-control.md
+│   ├── [          1]  sentinel-integration.md
+│   └── [       2195]  service-endpoints-and-securing-storage.md
+├── [        211]  labs.md
+├── [       4096]  _layouts
+│   └── [        790]  lab.html
+├── [       5264]  resume.md
+├── [       4096]  security-analyst
+│   └── [        428]  security-analyst.md
+├── [       4096]  _site
+│   ├── [       4096]  assets
+│   │   ├── [       4096]  css
+│   │   │   ├── [     101429]  main.css
+│   │   │   └── [     141805]  main.css.map
+│   │   ├── [       4096]  images
+│   │   │   ├── [       2539]  error.txt
+│   │   │   └── [      37017]  profile.jpg
+│   │   └── [       4096]  js
+│   │       ├── [       4096]  lunr
+│   │       │   ├── [       2493]  lunr-en.js
+│   │       │   ├── [      15650]  lunr-gr.js
+│   │       │   ├── [      99804]  lunr.js
+│   │       │   ├── [      29510]  lunr.min.js
+│   │       │   └── [        528]  lunr-store.js
+│   │       ├── [       7891]  _main.js
+│   │       ├── [     123980]  main.min.js
+│   │       ├── [     207650]  main.min.js.map
+│   │       ├── [       4096]  plugins
+│   │       │   ├── [      11364]  gumshoe.js
+│   │       │   ├── [      10254]  jquery.ba-throttle-debounce.js
+│   │       │   ├── [       3220]  jquery.fitvids.js
+│   │       │   ├── [       5215]  jquery.greedy-navigation.js
+│   │       │   ├── [      48977]  jquery.magnific-popup.js
+│   │       │   └── [      19585]  smooth-scroll.js
+│   │       └── [       4096]  vendor
+│   │           └── [       4096]  jquery
+│   │               └── [     288580]  jquery-3.6.0.js
+│   ├── [        590]  feed.xml
+│   ├── [       6952]  index.html
+│   ├── [       4096]  labs
+│   │   ├── [       6527]  index.html
+│   │   └── [       4096]  labs1
+│   │       └── [       8050]  index.html
+│   ├── [          0]  labs.md
+│   ├── [       4096]  resume
+│   │   └── [       8419]  index.html
+│   ├── [         43]  robots.txt
+│   └── [        541]  sitemap.xml
+└── [          0]  tree-adaptai(1).txt
+
+26 directories, 136 files

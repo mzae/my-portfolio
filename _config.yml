@@ -1,0 +1,71 @@
+# Site settings
+title: "Wanjama's Azure Security Portfolio"
+email: "wanjamadaniel69@gmail.com"
+description: >-
+  A personal portfolio showcasing my resume and Azure cloud security labs.
+baseurl: "/my-portfolio" # Leave empty for root
+url: "https://mzae.github.io" # GitHub Pages URL
+
+# Theme
+remote_theme: "mmistakes/minimal-mistakes"
+
+# Plugins (required by Minimal Mistakes and GitHub Pages)
+plugins:
+  - jekyll-remote-theme
+  - jekyll-archives
+  - jekyll-include-cache
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Author profile
+author:
+  name: "Daniel Wanjama"
+  avatar: "/assets/images/profile.jpg" # Optional
+  bio: "Cloud security specialist focused on Azure policies, compliance, and infrastructure protection."
+  location: "Nairobi, Kenya"
+  email: "wanjamadaniel69@email.com"
+  linkedin: "dennis1wanjama"
+
+# Collections
+#collections:
+ # labs:
+  #  output: true
+   # permalink: /labs/:title/
+
+collections:
+  labs:
+    output: true
+    permalink: /labs/:name/
+
+
+# Defaults for labs
+defaults:
+  - scope:
+      path: ""
+      type: labs
+    values:
+      layout: single
+      author_profile: true
+
+# Navigation data
+data_dir: _data
+
+# Markdown processor
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter_opts:
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+
+# Exclude folders from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - error.txt
