@@ -96,3 +96,7 @@ Cloud Security Engineer and ICT Specialist with over 8 years of experience in IT
 
 ## 📜 References
 Available upon request, in accordance with data protection regulations.
+
+## 📂 Portfolio
+Explore my [Security Analyst Portfolio](/portfolio/security-analyst/) for detailed projects, labs, and achievements.
+
