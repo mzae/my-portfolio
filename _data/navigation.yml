@@ -7,4 +7,5 @@ main:
     url: /labs/
   
   - title: "Security-Analyst-Portfolio"
-  - url: /portfolio/security-analyst/
+    url: '/portfolio/security-analyst/'
+
