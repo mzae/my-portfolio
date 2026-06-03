@@ -5,6 +5,7 @@ permalink: /resume/
 author_profile: true
 ---
 
+
 ## 📞 Contact Information
 - **Name:** Daniel Wanjama  
 - **Location:** Nairobi, Kenya  
@@ -98,5 +99,6 @@ Cloud Security Engineer and ICT Specialist with over 8 years of experience in IT
 Available upon request, in accordance with data protection regulations.
 
 ## 📂 Portfolio
-Explore my [Security Analyst Portfolio](/portfolio/security-analyst/) for detailed projects, labs, and achievements.
+Explore my [Security Analyst Portfolio]({{ '/portfolio/security-analyst/' | relative_url }}) for detailed projects, labs, and achievements.
+
 
