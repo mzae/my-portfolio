@@ -1,7 +1,7 @@
 # Site settings
 title: "Wanjama's Azure Security Portfolio"
 email: "wanjamadaniel69@gmail.com"
-description: >-
+description: >
   A personal portfolio showcasing my resume and Azure cloud security labs.
 baseurl: "/my-portfolio" # Leave empty for root
 url: "https://mzae.github.io" # GitHub Pages URL
@@ -24,20 +24,14 @@ author:
   avatar: "/assets/images/profile.jpg" # Optional
   bio: "Cloud security specialist focused on Azure policies, compliance, and infrastructure protection."
   location: "Nairobi, Kenya"
-  email: "wanjamadaniel69@email.com"
-  linkedin: "dennis1wanjama"
+  email: "wanjamadaniel69@gmail.com"
+  linkedin: "dennis1jama"
 
 # Collections
-#collections:
- # labs:
-  #  output: true
-   # permalink: /labs/:title/
-
 collections:
   labs:
     output: true
     permalink: /labs/:name/
-
 
 # Defaults for labs
 defaults:
@@ -45,7 +39,7 @@ defaults:
       path: ""
       type: labs
     values:
-      layout: lab     #changes the layout from single to lab
+      layout: lab
       author_profile: true
 
 # Navigation data
