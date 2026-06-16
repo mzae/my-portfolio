@@ -11,13 +11,13 @@ author_profile: true
 - **Location:** Nairobi, Kenya  
 - **Email:** wanjamadaniel69@gmail.com  
 - **Phone:** +254 736 263 884  
-- **LinkedIn:** [linkedin.com/in/dennis1jama](https://linkedin.com/in/dennis1jama)  
+- **LinkedIn:** [linkedin.com/in/dennis1jama](https://www.linkedin.com/in/dennis1jama/)  
 - **Portfolio:** [mzae.github.io/my-portfolio](https://mzae.github.io/my-portfolio)  
 
 ---
 
 ## 🧾 Professional Summary
-Cloud Security Engineer and ICT Specialist with over 8 years of experience in IT systems and support across government, enterprise, and NGO environments. Proven expertise in designing and securing cloud infrastructure on AWS, Azure, and Oracle Cloud, with hands-on skills in identity management, Zero Trust architecture, and automated monitoring. Track record of reducing downtime, improving system resilience, and optimizing cloud costs. Recognized for proactive problem-solving and strong client support.
+Cloud Security Engineer and ICT Specialist with over 8 years of experience in IT systems and support across government, enterprise, and NGO environments. Proven expertise in designing and securing[...]
 
 ---
 
@@ -88,7 +88,7 @@ Cloud Security Engineer and ICT Specialist with over 8 years of experience in IT
 
 ## 💡 Achievements
 - Reduced network downtime at Touchdown Systems using Wireshark  
-- Enhanced system resilience for Radar Security’s network  
+- Enhanced system resilience for Radar Security's network  
 - Achieved full Azure security compliance with AD and MFA  
 - Optimized AWS costs with Load Balancing and Auto Scaling  
 - Improved incident response using Microsoft Sentinel  
@@ -99,6 +99,5 @@ Cloud Security Engineer and ICT Specialist with over 8 years of experience in IT
 Available upon request, in accordance with data protection regulations.
 
 ## 📂 Portfolio
-Explore my [Security Analyst Portfolio]({{ '/portfolio/security-analyst/' | relative_url }}) for detailed projects, labs, and achievements.
-
+Explore my [cloud security labs]({{ '/labs/' | relative_url }}) for detailed projects and achievements.
 
