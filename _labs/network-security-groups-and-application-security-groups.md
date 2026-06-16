@@ -1,8 +1,8 @@
 ---
 title: "Azure Network Security Groups & Application Security Groups"
 layout: lab
+author: Wanjama Daniel
 permalink: /labs/azure-nsg-asg-lab/
-author: Daniel Wanjama
 date: 2025-09-16
 ---
 
@@ -14,20 +14,20 @@ This lab demonstrates how to secure Azure virtual machines using **Network Secur
 
 ## Objectives
 
-- Create resource group and virtual network  
-- Define Application Security Groups (ASGs)  
-- Deploy virtual machines for web and management roles  
-- Associate NICs with ASGs  
-- Configure NSGs with role-based inbound rules  
-- Validate traffic filtering and rule enforcement  
+- Create resource group and virtual network
+- Define Application Security Groups (ASGs)
+- Deploy virtual machines for web and management roles
+- Associate NICs with ASGs
+- Configure NSGs with role-based inbound rules
+- Validate traffic filtering and rule enforcement
 
 ---
 
 ## Prerequisites
 
-- Azure subscription with contributor or admin access  
-- Skillable lab environment or Azure sandbox  
-- Familiarity with Azure Portal and VM deployment  
+- Azure subscription with contributor or admin access
+- Skillable lab environment or Azure sandbox
+- Familiarity with Azure Portal and VM deployment
 
 ---
 
@@ -35,85 +35,99 @@ This lab demonstrates how to secure Azure virtual machines using **Network Secur
 
 ### Task 1: Create Resource Group & Virtual Network
 
-- Created resource group `RG-SecurityLab` in East Africa  
-- Deployed virtual network `VNet-SecurityLab` with subnets for Web and Management servers  
-📸 *Screenshot: `step01-resource-group.png` – Resource group creation*  
-![Resource Group](../../assets/images/labs/step01-resource-group.png)
+- Created resource group `RG-SecurityLab` in East Africa
+- Deployed virtual network `VNet-SecurityLab` with subnets for Web and Management servers
 
-📸 *Screenshot: `step01-virtual-network.png` – Virtual network setup*  
-![Virtual Network](../../assets/images/labs/step01-virtual-network.png)
+📸 *Screenshot: Resource group creation*
+![Azure Portal showing resource group creation with region and subscription details](../../assets/images/labs/step01-resource-group.png)
+*Resource Group*
+
+📸 *Screenshot: Virtual network setup*
+![Virtual network configuration showing subnets for web servers and management servers](../../assets/images/labs/step01-virtual-network.png)
+*Virtual Network*
 
 ---
 
 ### Task 2: Create Application Security Groups
 
-- Created ASG `ASG-Web` for web servers  
-- Created ASG `ASG-Management` for management servers  
-📸 *Screenshot: `step02-asg-web.png` – ASG for web servers*  
-![ASG - Web](../../assets/images/labs/step02-asg-web.png)
+- Created ASG `ASG-Web` for web servers
+- Created ASG `ASG-Management` for management servers
 
-📸 *Screenshot: `step02-asg-management.png` – ASG for management servers*  
-![ASG - Management](../../assets/images/labs/step02-asg-management.png)
+📸 *Screenshot: ASG for web servers*
+![Application Security Group creation interface for web server group](../../assets/images/labs/step02-asg-web.png)
+*ASG - Web*
+
+📸 *Screenshot: ASG for management servers*
+![Application Security Group creation interface for management server group](../../assets/images/labs/step02-asg-management.png)
+*ASG - Management*
 
 ---
 
 ### Task 3: Deploy Virtual Machines
 
-- Deployed Web Server VM with IIS installed  
-- Deployed Management Server VM configured for RDP access  
-📸 *Screenshot: `step03-web-vm.png` – Web VM deployment*  
-![Web VM](../../assets/images/labs/step03-web-vm.png)
+- Deployed Web Server VM with IIS installed
+- Deployed Management Server VM configured for RDP access
 
-📸 *Screenshot: `step03-management-vm.png` – Management VM deployment*  
-![Management VM](../../assets/images/labs/step03-management-vm.png)
+📸 *Screenshot: Web VM deployment*
+![Virtual machine deployment interface showing web server configuration with IIS](../../assets/images/labs/step03-web-vm.png)
+*Web VM*
+
+📸 *Screenshot: Management VM deployment*
+![Virtual machine deployment interface showing management server configuration for RDP](../../assets/images/labs/step03-management-vm.png)
+*Management VM*
 
 ---
 
 ### Task 4: Associate NICs with ASGs
 
-- Associated Web VM NIC with `ASG-Web`  
-- Associated Management VM NIC with `ASG-Management`  
-📸 *Screenshot: `step04-nic-asg.png` – NIC association with ASGs*  
-![NIC Association](../../assets/images/labs/step04-nic-asg.png)
+- Associated Web VM NIC with `ASG-Web`
+- Associated Management VM NIC with `ASG-Management`
+
+📸 *Screenshot: NIC association with ASGs*
+![Network interface configuration showing ASG association for web and management VMs](../../assets/images/labs/step04-nic-asg.png)
+*NIC Association*
 
 ---
 
 ### Task 5: Configure Network Security Groups
 
-- Created NSG for Web servers: allowed HTTP (port 80), blocked RDP  
-- Created NSG for Management servers: allowed RDP (port 3389) from trusted IPs, blocked HTTP  
-📸 *Screenshot: `step05-nsg-web.png` – NSG for web access*  
-![NSG - Web](../../assets/images/labs/step05-nsg-web.png)
+- Created NSG for Web servers: allowed HTTP (port 80), blocked RDP
+- Created NSG for Management servers: allowed RDP (port 3389) from trusted IPs, blocked HTTP
 
-📸 *Screenshot: `step05-nsg-management.png` – NSG for management access*  
-![NSG - Management](../../assets/images/labs/step05-nsg-management.png)
+📸 *Screenshot: NSG for web access*
+![NSG rules configuration showing HTTP 80 allowed and RDP blocked for web servers](../../assets/images/labs/step05-nsg-web.png)
+*NSG - Web*
+
+📸 *Screenshot: NSG for management access*
+![NSG rules configuration showing RDP 3389 allowed and HTTP blocked for management servers](../../assets/images/labs/step05-nsg-management.png)
+*NSG - Management*
 
 ---
 
 ### Task 6: Validate Traffic Filtering
 
-- Verified Web Server accessible via browser on port 80  
-- Verified Management Server accessible via RDP from admin workstation  
-📸 *Screenshot: `step06-iis-access.png` – IIS access test*  
-![IIS Access](../../assets/images/labs/step06-iis-access.png)
+- Tested HTTP access to Web VM (successful)
+- Tested RDP access to Management VM (successful)
+- Attempted cross-VM traffic (blocked as configured)
 
-📸 *Screenshot: `step06-rdp-access.png` – RDP access test*  
-![RDP Access](../../assets/images/labs/step06-rdp-access.png)
+📸 *Screenshot: Successful HTTP access to Web Server*
+![Browser showing successful HTTP connection to web server on port 80](../../assets/images/labs/step06-http-test-web.png)
+*HTTP Access to Web Server*
 
----
-
-### Task 7: Final Validation
-
-- Used Azure Network Watcher to confirm traffic flow matches NSG rules  
-📸 *Screenshot: `step07-network-watcher.png` – Network Watcher validation*  
-![Network Watcher](../../assets/images/labs/step07-network-watcher.png)
+📸 *Screenshot: Successful RDP connection to Management Server*
+![RDP client showing successful connection to management server on port 3389](../../assets/images/labs/step06-rdp-test-management.png)
+*RDP Access to Management Server*
 
 ---
 
-## Key Learnings
+## Summary
 
-- ASGs simplify rule management by grouping VMs logically  
-- NSGs enforce traffic filtering based on ASG membership  
-- Role-based access improves security posture in cloud environments  
+This lab successfully demonstrated how to use NSGs and ASGs to implement role-based network security. Web servers were isolated to HTTP only, while management servers were restricted to RDP with proper rule enforcement.
 
 ---
+
+## References
+
+- [Network Security Groups Documentation](https://learn.microsoft.com/en-us/azure/virtual-network/network-security-groups-overview)
+- [Application Security Groups](https://learn.microsoft.com/en-us/azure/virtual-network/application-security-groups)
+- [Security Best Practices](https://learn.microsoft.com/en-us/azure/security/fundamentals/network-best-practices)
