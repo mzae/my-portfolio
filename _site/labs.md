@@ -1,20 +1,39 @@
-## 🔥 Featured SOC Engineering Case Study
+# 🔐 Security Labs Portfolio
 
-### 🛡️ SOC Analyst Investigation Simulation
-A full end-to-end Security Operations Center incident response simulation using Microsoft Sentinel, Defender for Cloud, and Azure security controls.
+This portfolio is divided into two cybersecurity disciplines:
 
-👉 Includes:
-- Threat detection
-- Log analysis
-- Incident response workflow
-- Network containment
+---
 
-➡️ [View Full Case Study](/my-portfolio/_labs/security-analyst/)
+# ☁️ Cloud Security Engineering Portfolio
 
+Focus: Infrastructure security, identity, network security, and cloud hardening.
 
-## 🧠 SOC Analyst Case Study (Capstone)
+## Labs
 
-- [SOC Analyst Case Study – Security Operations Simulation](/my-portfolio/_labs/security-analyst.html)
+- Azure Firewall Configuration and Testing
+- Network Security Groups (NSG & ASG)
+- Service Endpoints & Storage Security
+- RBAC Implementation
+- Microsoft Identity & Access Management
+- Secure ACR & AKS Deployment
 
+---
 
-- SOC Analyst Case Study – Security Operations Simulation (featured at top of labs section)
+# 🛡️ SOC / Security Analyst Portfolio
+
+Focus: Detection, monitoring, incident response, and threat hunting.
+
+## Labs
+
+- Security Analyst Capstone (SOC Simulation)
+- Incident Response Case Study
+- Incident Response Playbook
+- Microsoft Sentinel Integration
+- Threat Hunting
+
+---
+
+# 📊 Summary
+
+- Cloud Security → Prevention & Architecture
+- SOC Security → Detection & Response
