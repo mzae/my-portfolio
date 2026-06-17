@@ -1,16 +1,48 @@
 ---
-layout: single
-title: "Welcome"
-author_profile: true
+layout: default
+title: Cloud Security Portfolio
 ---
 
-Hi, I'm **Daniel Wanjama** — an Azure cloud security enthusiast with a sharp eye for identity, access, and automation.
-This portfolio is a living showcase of my journey through Microsoft Entra ID, Zero Trust architecture, and secure infrastructure design.
+# Cloud Security Engineer | SOC Analyst | Azure Security Specialist
 
-From scripting bulletproof file organizers to documenting real-world labs on Conditional Access, Privileged Identity Management, and secure storage endpoints — I'm building a toolkit that's not just functional, but resilient.
+I design and simulate secure cloud environments using Microsoft Azure security services, focusing on identity protection, threat detection, incident response, and cloud governance.
 
-Explore my labs, walkthroughs, and technical write-ups as I turn cloud theory into hardened practice.
+---
 
-## Welcome to My Portfolio
-- [Resume](./resume/)
-- [Labs Overview](./labs/)
+## 🔐 Core Expertise
+
+- Microsoft Sentinel (SIEM & SOC Operations)
+- Azure Defender for Cloud Security Posture Management
+- Identity & Access Management (Entra ID / Azure AD)
+- Network Security (NSG, ASG, Azure Firewall)
+- Container Security (AKS, ACR)
+- Incident Response & Threat Hunting
+- Cloud Infrastructure Hardening
+
+---
+
+## 📊 What This Portfolio Demonstrates
+
+This repository contains **real-world security engineering labs** simulating enterprise environments:
+
+- Security monitoring & alerting (SIEM)
+- Attack surface reduction strategies
+- Cloud network segmentation
+- Identity governance models
+- Incident response workflows
+- Threat detection & hunting scenarios
+
+---
+
+## 🚀 Featured Areas
+
+👉 Explore hands-on security engineering labs:
+- Azure Firewall Architecture
+- Microsoft Sentinel Setup & Monitoring
+- AKS Secure Deployment Pipeline
+- IAM Role-Based Access Control
+- Threat Hunting Simulations
+
+---
+
+👉 Navigate to **Labs** to view full technical implementations with screenshots.
