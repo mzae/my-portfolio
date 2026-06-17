@@ -1,7 +1,17 @@
-main:
-  - title: "Home"
-    url: "{{ '/' | relative_url }}"
-  - title: "Resume"
-    url: "{{ '/resume/' | relative_url }}"
-  - title: "Labs"
-    url: "{{ '/labs/' | relative_url }}"
+- title: Home
+  url: /
+
+- title: Security Analyst Profile
+  url: /security-analyst/
+
+- title: Labs
+  url: /labs/
+
+- title: Incident Response
+  url: /_labs/incident-response-playbook.md
+
+- title: Threat Hunting
+  url: /_labs/threat-hunting.md
+
+- title: Resume
+  url: /resume/
