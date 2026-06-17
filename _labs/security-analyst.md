@@ -18,7 +18,7 @@ This page brings together all hands-on security engineering labs into a unified 
 
 ### 🔥 Core Security Operations Labs
 
-- [Incident Response Case Study](https://github.com/mzae/my-portfolio/blob/master/_labs/incident-response-case-study.md)
+- [Incident Response Case Study](../incident-response-case-study.md)
 - [Incident Response Playbook](../incident-response-playbook.md)
 - [Threat Hunting Lab](../threat-hunting.md)
 - [Sentinel Integration](../sentinel-integration.md)
