@@ -10,7 +10,7 @@ author_profile: true
 - **Name:** Daniel Wanjama  
 - **Location:** Nairobi, Kenya  
 - **Email:** wanjamadaniel69@gmail.com  
-- **Phone:** +254 736 263 884  
+- **Phone:** +254 726 54 77 91  
 - **LinkedIn:** [linkedin.com/in/dennis1jama](https://www.linkedin.com/in/dennis1jama/)  
 - **Portfolio:** [mzae.github.io/my-portfolio](https://mzae.github.io/my-portfolio)  
 
