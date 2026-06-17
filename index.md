@@ -13,4 +13,4 @@ Explore my labs, walkthroughs, and technical write-ups as I turn cloud theory in
 
 ## Welcome to My Portfolio
 - [Resume](./resume/)
-- [Labs Overview](./labs/)
+- [Labs Overview](./cloudlabs/)
