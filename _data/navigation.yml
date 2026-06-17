@@ -6,6 +6,9 @@
 
 - title: Labs
   url: /labs/
+  
+- title: Security Analyst
+  url: /security-analyst/
 
 - title: Incident Response
   url: /_labs/incident-response-playbook.md
