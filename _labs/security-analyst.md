@@ -6,6 +6,28 @@ level: Advanced
 tags: [SOC, SIEM, Incident Response, Threat Hunting]
 ---
 
+
+# 🛡️ SOC Analyst Case Study (Capstone)
+
+## 🧠 Overview
+This page brings together all hands-on security engineering labs into a unified SOC (Security Operations Center) simulation workflow.
+
+---
+
+## 🔗 SOC Security Labs Dashboard
+
+### 🔥 Core Security Operations Labs
+
+- [Incident Response Case Study](incident-response-case-study.md)
+- [Incident Response Playbook](incident-response-playbook.md)
+- [Threat Hunting Lab](threat-hunting.md)
+- [Sentinel Integration](sentinel-integration.md)
+
+
+
+
+
+
 # 🛡️ SOC Analyst Case Study – Security Operations Simulation
 
 ## 📌 Objective
