@@ -1,7 +1,7 @@
 ---
-layout: lab
-title: "Security Analyst Portfolio"
-permalink: /portfolio/security-analyst/
+layout: default
+title: Security Analyst Profile
+permalink: /security-analyst/
 ---
 
 ## 🔐 SOC Analyst Labs
